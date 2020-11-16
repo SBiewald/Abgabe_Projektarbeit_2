@@ -9,4 +9,4 @@ Die komplexere Variante übersteigt die simple nur im Punkt Zuverlässigkeit. De
 ## Zu diesem Repository
 Dieses Repository stellt die elektronische Abgabe aller relevanten Dokumente für die Projektarbeit 2 dar.
 Die vollständige Arbeit ist als PDF unter "master.pdf" vorhanden.
-Zur Erstellung dieser Arbeit wurde ein Latex Template verwendet, das unter Folgendem Link verfügbar ist: https://github.com/pfisterer/DHBW_LaTeX_Template.
+Zur Erstellung dieser Arbeit wurde ein Latex Template verwendet, das unter folgendem Link verfügbar ist: https://github.com/pfisterer/DHBW_LaTeX_Template.
