@@ -1,0 +1,70 @@
+% !TEX root =  master.tex
+\chapter{Vergleich der Möglichkeiten zur Testautomatisierung der Datenbankentests}
+\nocite{*}
+In den zurückliegenden Kapiteln wurden alle Arten beschrieben, auf die im Projekt manuell getestet, sowie alle Möglichkeiten, die zur Automatisierung dieser Tests erkundet wurden.
+Im Folgenden werden die beiden Varianten zur Automatisierung der Datenbankentests verglichen. Zu diesem Zweck werden erst Vor- und Nachteile beider Tests erläutert und anschließend gegenübergestellt.
+
+\section{Variante 1 - Verwendung eines bestehenden Frameworks}
+Der größte Vorteil des Einsatzes des \ac{FDD} für die Durchführung der Datenbankentests liegt in seiner Zuverlässigkeit. Das Framework wurde in einem separaten Projekt von dedizierten Softwareentwicklern erstellt und getestet. Zudem ist es bereits in mehreren Testprozessen zum Einsatz gekommen. Aus diesen Gründen kann von einer hohen Fehlertoleranz ausgegangen werden. Aktuell sind keine nicht behobenen Fehler im System bekannt. Auf der anderen Seite bietet es jedoch eine gewisse Abhängigkeit von den Urhebern. Entscheidungen über das Hinzufügen neuer Funktionen oder Änderungen des Prozesses werden vom zum Framework gehörigen Projektteam getroffen. Es ist natürlich möglich auch von außerhalb Vorschläge zu unterbreiten, deren Umsetzung ist jedoch nicht garantiert.
+\newline
+
+
+Das \ac{FDD} besitzt eine Reihe verschiedener Funktionen, die den Testprozess unterstützen können. So zum Beispiel die Empfehlung von Einschränkungen, die während des Testdesigns eine Grundlage bieten kann. Die Möglichkeit Testfällen eine Bewertung ihrer Wichtigkeit zuzuordnen erleichtert bei der Auswertung der aufgetretenen Defects die Priorisierung. Informationen über fehlgeschlagene Tests sind per E-Mail erhältlich. Zudem können Testfälle sowohl über Deequ Funktionen als auch über SQL-Anfragen definiert werden, was mehr Freiraum während der Testimplementierung liefert. Dafür macht es die Komplexität des \ac{FDD} aufwendiger neue Funktionen hinzuzufügen. So ist nicht nur die Entscheidung über das Hinzufügen neuer Funktionen abhängig von einer Vielzahl an Personen, sondern auch deren Implementierung zeit- und kostenaufwendig.
+\newline
+
+
+Außerdem fordert das Verwenden dieses Frameworks an einigen Stellen einen Extra-Zeitaufwand. Die bestehenden SQL-Anfragen müssen in das vorgegebene Format umgewandelt, und dann in ein \ac{JSON} - oder \ac{SQL} - Dokument eingetragen werden. Bei der Erstellung neuer Testfälle müssen auch neue SQL-Anfragen kreiert werden. Die erstellten Dokumente sind in den entsprechenden \ac{S3} - Buckets hochzuladen. Erst dann kann der Glue Job ausgeführt werden. 
+Außerdem müssen die erwarteten Ergebnisse der Testfälle weiterhin manuell erhoben werden, da das Framework pro Glue Job den Zugriff auf nur eine Datenbank ermöglicht. Der zeitliche Aufwand wird im Vergleich zur manuellen Variante lediglich in der Testdurchführung verringert, nicht jedoch in der Testimplementierung.
+\newline
+
+
+Ein weiterer Nachteil liegt in der Einarbeitungszeit, die benötigt wird, um mit diesem Framework testen zu können. Um das \ac{FDD} zu verwenden ist es mindestens nötig die Dokumentation zu lesen, um Informationen über das einzuhaltende Format der Testfälle, den Speicherort für die Testfälle und die anzupassenden Parameter in den Eigenschaften des Glue Jobs zur Verfügung zu haben. Außerdem werden \ac{SQL} - Kenntnisse vorausgesetzt.
+
+
+
+
+\section{Variante 2 - Erstellung eines neuen Frameworks}
+Die Stärken des vom Autor erstellten Skripts liegen hauptsächlich in seiner Simplizität. Es ist einzig und allein darauf ausgelegt zwei Tabellen aus einer oder mehreren Datenbanken zu Filtern und die Zeilenanzahl der gefilterten Tabellen zu vergleichen. Dadurch ist das Skript auch für Außenstehende leicht zu verstehen, sofern sie die benötigten Programmierkenntnisse in Python und Spark besitzen. 
+Die Einfachheit des Skripts ruft aber gleichzeitig den Nachteil hervor, dass Testfälle, die nicht nach dem bestehenden Prinzip aufgebaut sind, nicht auf diese Weise automatisiert werden können. 
+Zum aktuellen Zeitpunkt sind keine Testfälle geplant, die von dem bisher verwendeten Schema abweichen, jedoch ist es möglich, dass sich dies in der Zukunft ändert.
+\newline
+
+
+Ein anderer Vorteil besteht in der Art und Weise, wie auszuführende Testfälle implementiert werden. Es  müssen hierbei nur Paare von Spalte und zu filterndem Werten in das Skript eingetragen werden. Das bedeutet es sind keine \ac{SQL}-Kenntnisse nötig, um einen neuen Testfall einzutragen. Jedoch ist hier  die Übersichtlichkeit über alle eingetragenen Testfälle eingeschränkt.
+\newline
+
+
+Dass das Skript extra für den vorliegenden Anwendungsfall entwickelt wurde, bedeutet zunächst einen Mehraufwand an Arbeitszeit und -kosten. Die Kosten hierfür sind jedoch relativ gering, da in das Skript nur die nötigsten Funktionen eingebaut wurden und somit keine umfangreiche Programmierung nötig war. Außerdem wurde das Programm von einem dualen Studenten und nicht einem voll ausgebildeten Softwareentwickler konzeptioniert und entwickelt, was Kosten spart.   
+Es ist möglich, dass nicht bekannte Defects bestehen, da der duale Student weniger Erfahrung mitbringt, der Code von keiner zweiten Person überprüft und auch ein strukturiertes Testen des Skriptes nicht durchgeführt wurde. 
+\newline
+
+
+Ein weiterer Punkt sind die Freiheiten, die das Verwenden dieses Skriptes eröffnet. Alle Entscheidungen über das Skript können vom Projektteam direkt getroffen werden. Ob eine neue Funktionalität hinzugefügt werden soll, hängt allein von den  Bedürfnissen des Projektes ab. Das macht es möglich immer nur genau die Funktionen implementiert zu haben, die direkt gebraucht werden. Das spart Aufwand und senkt die Komplexität des Programms. Zudem ist das Hinzufügen neuer Funktionen auch vom Programmieraufwand her geringer, da nur wenige Abhängigkeiten zu beachten sind. Auch das ist nur dank der Einfachheit des Skriptes möglich.
+\newline
+
+
+Für den Testprozess bietet das Skript an mehreren Stellen Zeiteinsparungen. Die Testfälle in den Code einzutragen benötigt pro Testfall einen nur geringen Aufwand, da die einzutragenden Informationen bereits in den bestehenden \ac{SQL}-Anfragen und Testfalldefinitionen in Xray vorhanden sind. Für zukünftige Testfälle müssen außerdem keine \ac{SQL}-Anfragen mehr erstellt werden. 
+Eine weitere zeitliche Einsparung passiert in der Erhebung der erwarteten Werte. Auch dafür ist bei jedem Testfall ein zeitlicher Aufwand nötig, da die hierfür benötigten Spalte - Werte - Kombinationen zunächst in das Skript einzutragen sind. Dies hat jedoch den Vorteil, dass die erwarteten Werte danach immer automatisiert erhoben werden und gleichzeitig immer aktuell sind. 
+\newline 
+
+Die Ergebnisse des Testens sind manuell über zum Beispiel Amazon Athena abrufbar. Dafür muss nach jeder Ausführung des Glue Jobs zusätzlich ein Crawler ausgeführt werden, der Metainformationen der erstellten Ergebnistabelle bereitstellt. Dieser Crawler kann immer automatisch nach der Ausführung des Glue Jobs arbeiten. Die Ausführungszeit eines solchen Crawlers beträgt wenige Sekunden. Die Einsicht in die Ergebnisse bildet somit zusätzlichen einmaligen manuellen Aufwand um einen Crawler zu konfigurieren, jedoch gleichzeitig eine gute Übersichtlichkeit über das Resultat eines jeden Testfalls. Zudem können die Ergebnisse leicht gefiltert werden.
+\newline
+
+Ein weiterer positiver Aspekt des vom Autor erstellten Skriptes ist, dass Definition und Ausführung aller Tests und Testfälle auf zwei oder mehreren Datenbanken innerhalb eines Glue Jobs zentralisiert sind. Gleichzeitig ist es mit sehr geringem Aufwand möglich zum Beispiel die Tests der einzelnen Testfallgruppen in unterschiedliche Jobs auszulagern, um die Übersichtlichkeit zu erhöhen.
+\newline
+Da die Testfälle direkt im Skript definiert werden müssen, werden alle bei einer Ausführung des Jobs nicht benötigten Testfälle herausgelöscht. Wenn diese jedoch bei der nächsten Ausführung wieder zu verwenden sind, müssen sie neu erstellt werden. Um  dies zu umgehen kann auf das Löschen nicht gebrauchter Testfälle verzichtet werden, wobei dann immer alle Testfälle durchgeführt werden müssten. Das würde dazu führen, dass die Ergebnistabelle durch eine Vielzahl unnötiger Informationen unübersichtlicher wird. 
+Eine Möglichkeit dieses Problem zu umgehen ist zum Beispiel die Testfälle im entsprechenden Format in Skript - unabhängigen Dokumenten zu speichern und nur in das Skript einzufügen, sollten sie auch benötigt werden.
+
+\section{Vergleich der beiden Varianten}
+Zusammenfassend ist zu sehen, dass die Variante mit dem \ac{FDD} vor allem durch Zuverlässigkeit und Menge an Funktionalitäten überzeugt. Dafür ist sie jedoch unflexibler, da die Entscheidungsgewalt über das Tool außerhalb des eigenen Projektteams liegt. 
+Das vom Autor erstellt Skript bekommt seine Vorteile vor allem durch Simplizität und Kontrolle des Projektteams über das Skript. Jedoch ist die Fehleranfälligkeit bei dieser Variante höher. Ausgeglichen werden kann dies über seine einfache Natur, denn so gibt es weniger Bereiche, in denen Defects auftreten können, gleichzeitig sind sie schneller auffind- und behebbar. 
+In dem komplexen und langen Skript des anderen Frameworks hingegen kann das Finden von Defects einen größeren Aufwand bedeuten. 
+\newline
+
+Die Ergebnisse der Tests werden in der 1. Variante automatisch  per E-Mail an festgelegte Personen oder Teams - Kanäle versendet. Hierbei sind auch weitere Informationen zu den fehlgeschlagenen Testfällen vorhanden. Für die zweite Variante muss nach der Ausführung des Glue Jobs manuell auf die erstellte Tabelle zugegriffen werden, um die Ergebnisse zu erlangen. Dafür wird hier eine bessere Übersichtlichkeit über alle durchgeführten Testfälle gewährt. Das ist im vorliegenden Anwendungsfall von Vorteil, da hier nicht jeder gefundene Defect einzeln behoben werden muss, sondern Strukturen in den aufgetretenen Defects herauszufinden und als Ganzes zu beheben sind. Das \ac{FDD} liefert zwar schnell alle fehlgeschlagenen Testfälle per E-Mail jedoch gibt es keinen Überblick über dieselben.  
+\newline
+
+Zwei der wichtigsten Ziele der Automatisierung sind die Zeiteinsparung und das Freisetzen von Arbeitskräften, um sie an anderen Stellen einsetzen zu können. Stellt man die beiden zu Grunde liegenden Varianten gegenüber so ist zu sehen, dass in Variante 1 die Implementierung sowohl bestehender als auch neuer Testfälle einen größeren Zeitaufwand verursacht als die gleiche Implementierung mit Variante 2. Die Ausführungszeit der beiden Glue Jobs ist nicht bekannt und wird daher als gleichwertig eingeschätzt. Die zweite Variante bietet zusätzlich Zeiteinsparungen bei der Erhebung von erwarteten Werten pro Testfall. Daraus folgt, dass Variante 2 für das Projekt zeitlich einen größeren Vorteil bietet als Variante 1.
+
+\section{Empfehlung an das Projektteam}
+Dem Projektteam wird empfohlen, das vom Autor für den konkreten Anwendungsfall erstellte Skript zur Automatisierung des Datenbankentests zu verwenden. Da das \ac{FDD} in anderen Fällen schon zum Einsatz kam, bietet es zwar mehr Funktionen und könnte zuverlässiger arbeiten, unterliegt aber dennoch der anderen Variante. Diese bietet in den vom Projektteam als wichtig befundenen Kategorien, also durch ihren einfachen Charakter, die Übersichtlichkeit der Ergebnisse und die zu erwartende größere Zeitersparnis, eindeutige Vorteile. 

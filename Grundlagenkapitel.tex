@@ -1,0 +1,215 @@
+% !TEX root =  master.tex
+\chapter{Grundlagen zu Softwaretests und zur verwendeten Software}
+\nocite{*}
+Dieses Kapitel enthält alle theoretischen Grundlagen, die für das Verständnis dieser Arbeit notwendig sind.
+\section{Einführung in Softwaretests}
+Zunächst werden die Grundlagen von Softwaretests in Bezug auf Definition, wichtige Terminologien, Gründe für das Testen, den Testprozess und einigen Testarten beschrieben.
+\subsection{Testen - eine Begriffsdefinition}
+Als eine allgemeine Definition für Testen bietet Hambling et al. folgende an: \begin{quote}Testen ist die systematische und methodische Untersuchung eines Arbeitsprodukts unter Verwendung einer Vielzahl von Techniken mit der ausdr{\"u}cklichen Absicht zu zeigen, dass es seinen gew{\"u}nschten oder beabsichtigten Zweck nicht erf{\"u}llt. Dies geschieht in einer Umgebung, die der Umgebung, die im Echtbetrieb eingesetzt werden soll, m{\"o}glichst nah kommt.~\cite[section WHAT TESTING IS AND WHAT TESTING DOES paragraph 2]{Hambling.2019}\end{quote}
+Mithilfe von Tests wird also überprüft, ob ein Produkt allen Anforderungen entspricht, die an dieses gestellt werden, indem mögliche Fehler gefunden und aufgezeigt werden. Bei Softwaretest unterscheiden Hambling et al. unter drei verschiedenen Arten von  Fehlern. Zum einen dem Error, der einen menschlichen Fehler bei der Erstellung des Codes meint, zum anderen dem Defect, der sich aus einem Error ergibt, wenn dieser zum Beispiel in einem Code niedergeschrieben wird, und dem Failure, der aus einem Defect entsteht und das sichtbare falsche Verhalten eines Systems nach Ausführung des Codes meint. Dabei muss ein Defect nicht notwendigerweise immer einen Failure hervorrufen~\cite{Hambling.2019}. 
+Testen ist außerdem immer ein geplanter, nachvollziehbarer und kontrollierbarer Prozess, bei dem das Produkt unter Bedingungen zu prüfen ist, die denen in der Liveumgebung möglichst nahe kommen. 
+
+\subsection{Klärung wichtiger Begriffe zum Testen}
+Um das Thema Testen zu behandeln, müssen vorab einige wichtige Begriffe geklärt werden. 
+Bevor es zum Testen kommen kann, ist ein Verständnis für die Anforderungen notwendig, die das zu testende Produkt erfüllen muss. Dieses Wissen wird als Testbasis, oft zum Beispiel in der \ac{SRS} festgehalten. Die Testbasis enthält also Beschreibungen von Reaktionen, die das Produkt in bestimmten Situationen oder Zuständen zeigen soll. Diese Beschreibungen werden als Testbedingungen bezeichnet. 
+Wenn für eine Testbedingung konkrete In- und erwartete Outputs festgelegt werden, spricht man von sogenannten Testfällen. 
+Der Testvorgang dagegen bezeichnet die Durchführung von Testfällen, zu dem auch die Schaffung der Voraussetzungen für jeden einzelnen Testfall gehören.~\cite{Hambling.2019}
+Im Folgenden wird unter Tests eine Menge von Testfällen verstanden. 
+
+\subsection{Gründe für das Testen}
+Das Testen kann unterschiedliche Gründe haben, wobei das Testen an sich keinen Wert hat oder Vorteil bringt. 
+Erst infolge der Auswertung der Testergebnisse können Maßnahmen eingeleitet werden, die zum Beispiel für ein Unternehmen einen Wert generieren. 
+Das Auftretens von Defects selbst führt unter Umständen zu Failures im System, die bei der Arbeit mit oder an dem Produkt stören können oder diese unmöglich machen. Sowohl im Entwicklungsprozess des Produktes als auch bei seiner Verwendung durch Endnuzter ist es dabei besonders wichtig, Defects möglichst früh zu finden, da dadurch Kosten, die für die Behebung aufgewendet werden müssen, reduziert werden können~\cite{Black.2014}. 
+\newline
+
+
+Andere Gründe für das Testen sind eher qualitativer Natur. Kunden erwarten, dass ein Produkt auf eine bestimmte Art und Weise funktioniert. Wenn aber ständig Defects auftreten, dann sind die Funktionen des Produktes eingeschränkt und die Erfahrung des Kunden mit dem Produkt verschlechtert sich. Daher ist es für Unternehmen sinnvoll eine Minimierung der Defects anzustreben. 
+In anderen Situationen kann die Erhöhung der Verlässlichkeit einer Software sogar zur Minimierung von Risiken beitragen. ~\cite{Black.2014} Ein Beispiel hierfür ist ein Atomkraftwerk, da Failures in einem solchen Umfeld das Potenzial haben Menschenleben in großer Zahl in Gefahr zu bringen und deshalb unbedingt vermieden werden müssen.
+
+
+\subsection{Der Testprozess}
+Testen ist ein Prozess. Allerdings handelt es sich um keinen universellen Prozess, der einmal definiert und in jedem Fall genau so ausgeführt werden kann. Vielmehr sollte der Prozess auf den jeweiligen Anwendungsfall angepasst werden. An dieser Stelle wird also nur ein allgemeiner Testprozess vorgestellt. Eine mögliche Beschreibung eines Testprozesses beschreibt Hambling et al. folgendermaßen:
+\newline
+Während der Testplanung wird zunächst umrisshaft entschieden, was getestet werden soll, auf welche Weise gearbeitet wird und wie die Arbeitsverteilung sein soll. Dazu gehört auch die Erstellung der Abschlusskriterien, durch die genau definiert wird, ab wann das Testen als abgeschlossen anzusehen ist.  Die Planung wird in Form eines Testplans schriftlich festgehalten. 
+\newline
+
+
+Hambling et al. beschreiben als  nächstes die Testüberwachung und -steuerung, weil sie von diesem Punkt an kontinuierlich bis zum Ende des Testprozesses durchgeführt werden muss. Die Testüberwachung meint vor allem den Vergleich vom Ist-Zustand und dem im Testplan definierten Soll-Zustand. Die Teststeuerung geht mit der Testüberwachung einher, da sie die Einleitung von Maßnahmen zur Einhaltung des Testplans beinhaltet.
+\newline
+
+
+In der Testanalyse wird die Testbasis daraufhin analysiert, was getestet werden soll.  In diesem Schritt muss auch entschieden werden, was getestet werden kann, um daraus  die Testbedingungen zu entwickeln. In diesem Schritt werden auch mögliche Errors in der Testbasis identifiziert, um zu verhindern, dass diese später im Code implementiert zu Defects werden. 
+\newline
+
+
+Im Testdesign werden aus den gefundenen Bedingungen die Testfälle erstellt. Wichtig ist hierbei, wie schon im vorherigen Schritt bei den Testbedingungen, dass die Testfälle sehr klar und genau definiert werden, damit es bei der späteren Durchführung der Tests nicht zu falschem Testen kommt.
+\newline
+
+
+Die Testimplementierung kann bereits mit dem Testdesign einhergehen. Darunter versteht man alle Maßnahmen, die dazu dienen, die spätere Durchführung der einzelnen Testfälle zu ermöglichen. Dieser Schritt hängt maßgeblich von dem vorliegenden Anwendungsfall ab, so muss zum Beispiel für das automatisierte Testen zunächst ein entsprechendes Skript erstellt werden.
+\newline
+
+
+Im Schritt der Testausführung werden die einzelnen Testfälle manuell oder automatisiert durchgeführt und die Ergebnisse aufgezeichnet, sodass gefundene Defects später bearbeitet werden können. 
+\newline
+
+
+Wenn alle Testfälle durchgeführt wurden und alle Abschlusskriterien erfüllt sind, kann der Testprozess abgeschlossen werden. Es wird empfohlen alle für das Testen erstellten Dokumente mit den gewonnenen Erfahrungen  für zukünftige Projekte aufzubewahren ~\cite{Hambling.2019}.
+
+\subsection{Statisches und dynamisches Testen}
+Da jeder Softwaretest entweder statischer oder dynamischer Natur ist, soll auf diese beiden Konzepte hier näher eingegangen werden.
+Das Testen von Software kann nicht nur während der Ausführung eines Programms geschehen, sondern auch davor. Dabei nennt sich das Testen davor, also ohne Ausführung eines Codes, statisches Testen. 
+Da diese Art zu Testen keinen fertigen Code benötigt, können solche Tests teilweise bereits zu einem frühen Zeitpunkt im Lebenszyklus eines Produkts durchgeführt werden. Dies kann sehr vorteilhaft sein, weil möglichst frühzeitig gefundene Defects in der Regel weniger aufwendig zu beheben sind und so geringere Kosten verursachen. 
+Unter dynamischen Testen versteht man alle Tests, die während der Ausführung eines Codes erfolgen. Im Gegensatz zum statischen Testen setzt das dynamische Testen die Ausführbarkeit der Software voraus ~\cite{Hambling.2019}.
+
+
+\subsection{Einige Testarten}
+In diesem Kapitel werden einige Möglichkeiten vorgestellt, wie getestet werden kann.
+
+\subsubsection{White Box Tests}
+Beim White Box-Testen wird das zu testende Programm nicht aus der Position des Anwenders betrachtet, sondern aus der des Entwicklers. Der Fokus liegt daher auf dem Testen des Programmcodes, um die Funktionalitäten des Programms sicherzustellen. Da hierbei der Code nicht ausgeführt wird, handelt es sich um statisches Testen.
+\newline
+
+
+Es gibt verschiedene Prinzipien, die angewendet werden können, um die Fehlerlosigkeit von Code möglichst gut sicherzustellen~\cite{Gopalaswamy.2009}. Da im Zuge dieser Arbeit jedoch das Testen von Codes keine wesentliche Rolle spielt, werden die Prinzipien und Konventionen des Testens von Codes an dieser Stelle nicht weiter ausgeführt. Falls trotz alledem Interesse daran besteht sei auf folgende grundlegenden Konzepte verwiesen: "Desk Checking", "Code Walkthrough", "Formal Inspection", die bei Gopalaswamy~\cite{Gopalaswamy.2009} beschrieben sind.
+
+
+\subsubsection{Black Box Tests}
+Im Gegensatz zum White Box Testen wird beim Black Box Testen der Code selbst nicht betrachtet. Die Software wird quasi von einer außenstehenden Position, also aus der Blickrichtung des Nutzers, getestet. 
+Dabei werden neben der Funktionalität der Software auch deren Reaktionen auf falsche Eingaben durch den Nutzer überprüft.
+Diese Vorgehensweise setzt kein Wissen um die genaue innere Funktionsweise der Software voraus. Der Wissensstand des Testers kann daher mit dem eines potenziellen Kunden übereinstimmen.
+Da die Perspektive eines Nutzers eingenommen wird, beschränken sich Überprüfungen nicht nur auf die Funktionsweise bzw. das Funktionieren der Software, sondern schließen auch deren  Reaktion auf falsche Eingaben durch den Nutzer ein~\cite{Gopalaswamy.2009}.
+\newline
+
+
+Diese Tests basieren sowohl auf den im Vorfeld definierten Anforderungen an das fertige Produkt, als  auch auf impliziten Anforderungen, die  von einem Endnutzer erwartet werden könnten, aber in der Testbasis nicht explizit festgestellt wurden. Um sicherzustellen, dass auch alle wichtigen impliziten Anforderungen eingehalten werden, können diese neben den im \ac{SRS} festgehaltenen expliziten Anforderungen in der \ac{TRS} definiert werden~\cite{Gopalaswamy.2009}. 
+
+\subsubsection{Regressionstests}
+In manchen Fällen ist es notwendig dieselben Tests sehr häufig oder regelmäßig durchzuführen. Solche Tests werden als Regressionstests bezeichnet. Vor allem im Softwarebereich ist diese Art von Testen oft aufzufinden. Das liegt daran, dass an Software in vielen Fällen selbst nach Veröffentlichung des eigentlichen Produkts immer noch weiter gearbeitet wird. Jede neue Version der Software, die veröffentlicht wird, muss getestet werden. Gerade bei komplexen Systemen mit vielen Abhängigkeiten kann es vorkommen, dass das Hinzufügen oder Ändern einer Funktion zum einen Defects in dieser Funktion, zum anderen Defects an weiteren Stellen im System verursacht. Diese Problematik besteht bei jeder Änderung des Codes, also zum Beispiel auch bei der Behebung von Defects. Deshalb fokussieren sich Regressionstests darauf, bereits absolvierte Testfälle erneut durchzuführen. Das kann zum Beispiel nach jeder Behebung eines Defects geschehen~\cite{Gopalaswamy.2009}.
+
+
+\section{Einführung in die Automatisierung von Softwaretests}
+Bei der Automatisierung von Softwaretests handelt es sich um die \begin{quote}Entwicklung von Software zum Testen von Software.~\cite[section 16.1 paragraph 2]{Gopalaswamy.2009}\end{quote} 
+Dieses Kapitel behandelt die Automatisierung von Softwaretests. Es wird aufgezeigt, warum Tests automatisiert werden, welche Herangehensweisen dabei verwendet werden können und welche Grenzen es gibt.
+
+\subsection{Gründe für die Automatisierung}
+Die manuelle Ausführung von Tests hat ihre Vorteile, auf die im nachfolgenden Kapitel noch eingegangen werden, erreicht aber auch schnell Grenzen. So hängt die Geschwindigkeit der Durchführung von Testfällen hier maßgeblich von menschlichen Fähigkeiten ab und erfordert oft eine große Anzahl an Testern. So kann ein bestimmter Testfall zwar wichtig für einen Test sein, jedoch einen so großen Aufwand erfordern, dass er von den Projektmitgliedern nicht geleistet werden kann. Um dem entgegenzuwirken, können Tests mithilfe von Software automatisiert werden.
+\newline
+
+
+Einer der wichtigsten Gründe für Testautomatisierung ist daher die Geschwindigkeitssteigerung. Die meisten Tests, die ein Mensch durchführen kann, können automatisiert viel schneller abgeschlossen werden. Dies bietet zum einen die Möglichkeit mehr Testfälle durchzuführen, zum anderen können auch komplexe oder sehr zeitintensive Testfälle effektiver ausgeführt werden. So können Testfälle, die manuell nicht durchführbar wären, in den Testprozess integriert werden. 
+Für manche Tests genügt eine einmalige Ausführung nicht, zum Beispiel bei Regressionstests. Diese Art von Tests müssen häufig wiederholt werden. Auch das kann in kleineren Projekten für zu viel Aufwand sorgen.
+\newline
+Doch Automatisierung senkt nicht nur die Zeit, die pro Testfall benötigt wird, sondern gibt auch Arbeitskräfte  frei, die vorher manuell Tests durchführen mussten. Diese Personen können sich nun zum Beispiel darauf konzentrieren neue Testfälle zu erstellen.
+\newline
+
+
+Darüber hinaus werden menschliche Tester unweigerlich selbst Fehler machen, die das Testergebnis verfälschen. Dieses Problem tritt nicht auf, wenn das Testen von Software übernommen wird, sofern diese nicht fehlerhaft ist. Zudem ist keine Grenzen gesetzt, wie lange am Stück Testfälle ausgeführt werden können, da keine Ermüdungserscheinungen auftreten wie bei menschlichen Testern~\cite{Patton.2005}.
+
+
+\subsection{Grenzen der Automatisierung}
+Bei Betrachtung der positiven Aspekte von Automatisierung kann man leicht zum Schluss kommen, dass es immer von Vorteil ist Tests zu automatisieren. Das ist allerdings nicht der Fall. Auch der Testautomatisierung sind Grenzen geboten~\cite{Patton.2005}. Eine davon geht bereits aus der im Kapitel 3.2 (Einführung in die Automatisierung von Softwaretests) gegebenen Definition für Softwaretestautomatisierung hervor. Die zu testende Software wird bei einem automatisierten Test mithilfe von Software überprüft. Daraus folgt, dass Tests nur automatisierbar sind, wenn sie durch Software ausgeführt werden können. Software kann in vielen Fällen die Schritte eines Tests nacheinander durchführen, doch die kreativen, intellektuellen und intuitiven Eigenschaften eines menschlichen Testers fehlen hierbei~\cite{Bucsics.2015}. 
+\newline
+
+
+Es gibt Testfälle, die nicht automatisierbar sind. Gerade wenn das \ac{UI} zu testen ist, wird die manuelle Variante oft vorgezogen. Beispielhaft kann man sich hier eine Anwendung vorstellen, die auf verschiedenen Arten von Geräten für einen Nutzer einsetzbar sein soll. Dafür ist es wichtig zu überprüfen, ob das Interface auf allen Geräten gut erkennbar ist. Einem Menschen fällt in so einem Fall schnell auf, ob ein Text zu klein ist, oder ob bestimmte Hintergrundfarben die Lesbarkeit beeinträchtigen. Diese Art von Betrachtung ist für ein Programm nicht möglich~\cite{Bucsics.2015}.
+
+\subsection{Tools zur Automatisierung}
+Es existiert eine große Menge an Tools, die genutzt werden kann, um Softwaretests zu automatisieren. Welches davon zu wählen ist, hängt immer von dem vorliegenden Anwendungsfall ab. An dieser Stelle sollen nur die Tools näher beschrieben werden, die in dem dieser Arbeit zugrunde liegenden Projekt auch tatsächlich Anwendung fanden.
+\subsubsection{Selenium}
+Selenium ist ein Open Source Tool zur Automatisierung von Web Browsern. Das bedeutet, es bietet die Möglichkeit in einem Browser Maus- und Tastaturinputs zu simulieren. Der Einsatz beschränkt sich somit nicht nur auf das Testen, jedoch ist die Testautomatisierung in Browsern in den meisten Fällen das Ziel. Selenium ist ein weit verbreitetes Tool. Das liegt unter anderem an einfacher Nutzbarkeit und der Kompatibilität mit den meisten Browsern und einer Vielzahl von Programmiersprachen. Selenium ist ein übergreifendes Projekt für mehrere Tools zur Browser-Automatisierung~\cite{Axelrod.2018}.
+\newline
+
+\begin{itemize}
+	
+	\item Selenium WebDriver
+	
+	\item Selenium \ac{IDE}
+	
+	\item Selenium Grid
+	
+	\item Selenium \ac{RC}
+	
+\end{itemize}
+
+Wenn von Selenium gesprochen wird, ist in den meisten Fällen Selenium WebDriver gemeint. WebDriver, auch Selenium 2 genannt, besteht zum einen aus einer Code Bibliothek, die in verschiedenen Programmiersprachen verwendbar ist, und zum anderen aus browserspezifischen Treibern. 
+\newline
+Mithilfe von Selenium WebDriver kann in Programmiersprachen, wie Java, Python und C\#, Code geschrieben werden, der Tastatur- und Mausinputs im Browser simuliert. Dafür muss auf die \ac{HTML} Elemente der Website zugegriffen werden. Der entsprechende Treiber führt dann beim Ausführen des geschriebenen Programms die im Code definierten Schritte durch~\cite{selenium.webdriver}.
+\newline
+
+
+Ein weiteres zu Selenium gehöriges Tool ist Selenium \ac{IDE}. Dies ist als ein Firefox Add-On und eine Chrome Extension umgesetzt. Eine der wichtigsten Funktionen von Selenium \ac{IDE} ist das Aufnehmen und Wiedergeben von Interaktionen mit dem Browser. Somit können Arbeitsschritte einfach und schnell automatisiert werden. Für umfangreiche Testprozesse mit einer Vielzahl von Testfällen wird es jedoch nicht empfohlen. In solchen Fällen sollte Selenium WebDriver oder Grid verwendet werden~\cite{selenium.ide}.
+\newline
+
+
+Um die gleichzeitige Ausführung von Testfällen auf mehreren Maschinen mit unterschiedlichen Betriebssystemen und Browsern zu koordinieren kann Selenium Grid eingesetzt werden. Einer der größten Vorteile von Grid liegt in der Zentralisierung des Testprozesses. Der Nutzer hat die Möglichkeit in seinem System unterschiedliche Konfigurationen von zum Beispiel Browserversionen für eine Reihe von Tests festzulegen. Selenium Grid sendet dann Befehle an die entfernten Browser. So können die Tests in unterschiedlichen Umgebungen parallel durchgeführt werden~\cite{selenium.grid}.
+\newline
+
+Selenium \ac{RC}, auch bekannt als Selenium 1, war das Hauptprojekt von Selenium, bevor es durch Selenium 2 ersetzt, beziehungsweise in Selenium 2 integriert wurde. In Selenium \ac{RC} wurden erstellte Skripte über den Selenium Server im Browser ausgeführt. Heutzutage wird Selenium RC nicht mehr unterstützt~\cite{selenium.rc}.
+
+
+\subsubsection{Apache Spark}
+Apache Spark ist nicht wie Selenium ein Tool mit dem primären Nutzen der Testautomatisierung, sondern ein Open Source Framework für parralele Datenverarbeitung. Spark ist darauf ausgelegt große Datenmengen effizient zu verarbeiten. Die schnellen Ausführungszeiten entstehen vor allem durch die Speicherung der für das jeweilige Programm benötigten Datenmengen im Arbeitsspeicher, sodass diese für das Programm jederzeit schnell abrufbar sind. Spark wurde ursprünglich in Scala implementiert, bietet aber eine \ac{API} für die Programmiersprachen Java, R, Scala und Python an~\cite{Bengfort.2016}.
+Grundsätzlich bestehen Spark Anwendungen immer aus einem Treiber und einer Reihe an Arbeitern~\cite{Chellappan.2018}.
+\newline
+
+\paragraph{Spark Komponenten}
+Spark setzt sich aus mehreren Komponenten zusammen.
+\newline
+Spark Core ist meist bekannt unter \ac{RDD} (deutsch: belastbarer verteilter Datensatz). \ac{RDD}'s sind eine Datenstruktur in Spark, die eine verteilte Menge an Objekten darstellt. Wichtig zu beachten ist, dass diese \ac{RDD}'s immutable - also nicht veränderbar sind. Das bedeutet, sollte eine Änderung an einem \ac{RDD} vorgenommen werden, dann wird dieser nicht tatsächlich abgeändert, sondern ein neuer RDD erstellt, in dem die gewünschten Änderungen zur Zeit seiner Anfertigung angewendet werden. Außerdem ermöglichen \ac{RDD}'s parallelisierte Berechnungen auf den in ihnen enthaltenen Objekten~\cite{Chellappan.2018}.
+\newline
+Mithilfe von Spark \ac{SQL} ist es möglich Datensätze in einer ähnlichen Weise zu manipulieren, wie es mit \ac{SQL} getan werden kann. Dafür werden als Datenstruktur hauptsächlich so genannte Dataframes verwendet. Diese besitzen im Vergleich zu \ac{RDD}'s nähere Informationen bezüglich der Struktur der Daten~\cite{Bengfort.2016}.
+\newline
+Eine Erweiterung von Spark Core stellt Spark Streaming dar. Durch diese Komponente ist in Spark nicht nur die sequentielle Verarbeitung großer Datenmengen möglich, sondern auch die Echtzeitverarbeitung von Streaming-Daten.
+\newline
+Die Spark \ac{MLib} Bibliothek besteht aus einer Reihe von Funktionen zur Unterstützung von Machine Learning für Apache Spark~\cite{Chellappan.2018}.
+\newline
+GraphX eröffnet die Möglichkeit die parallele Datenverarbeitung auf Graphen auszudehnen. Es besteht aus einer Reihe von Algorithmen zur Manipulation der Graphen~\cite{Bengfort.2016}.
+
+
+\paragraph{Deequ}
+Eine Erweiterung der Funktionalitäten von Apache Spark stellt Deequ dar. Dies ist eine von Amazon entwickelte Bibliothek zur Durchführung von Modultests auf Datenbanken~\cite{Schelter.2018}. Mit Modultests ist das separate Testen der einzelnen Komponenten eines Systems gegen deren komponentenspezifische Anforderungen gemeint~\cite{Mili.2015}. 
+\newline
+
+
+Ein Nutzer kann mithilfe der Funktionen von Deequ Einschränkungen und Regeln für die zu überprüfenden Tabellen festlegen. Diese werden bei der Ausführung in \ac{SQL}-Anfragen umgewandelt und durch die Unterstützung von Spark \ac{SQL} auf die Tabellen angewendet. Informationen darüber, ob die einzelnen Tests erfolgreich waren oder nicht können hinterher ausgegeben werden~\cite{Schelter.2018}.
+\newline
+
+
+Eine Besonderheit von Deequ ist die Fähigkeit zu testende Einschränkungen für eine gegebene Tabelle automatisch zu generieren. Dabei handelt es sich um Empfehlungen, die von Deequ nach der Inspektion einer Tabelle an einen Nutzer in Form von Deequ Funktionen, gemacht werden können~\cite{Schelter.2018}.
+
+\section{Grundlegende Konzepte von Datenbanken}
+Weil in dieser Projektarbeit das Testen von Datenbanken im Fokus steht, sollen in diesem Kapitel kurz einige grundlegende Konzepte von Datenbanken erläutert werden.
+\newline
+
+Unter einer Datenbank wird ein strukturierter Datenbestand verstanden, der durch ein \ac{DBMS} kontrolliert wird. Ein \ac{DBMS} ist eine Software, die zur Verwaltung von Datenbanken eingesetzt werden kann. Die Kombination einer Datenbank und eines \ac{DBMS} nennt man Datenbanksystem. Über das \ac{DBMS} werden Datenbanken, Datenbankmodelle zugeordnet. Diese beschreiben die Daten. Eines der meistverwendeten Datenbankmodelle ist das Relationenmodell~\cite{Saake.2018}. 
+\newline
+
+Relationale Datenbanken definieren sich darüber, dass die Inhalte einer Datenbank in Tabellen eingeteilt sind. Diese Tabellen werden auch Relationen genannt. Die Spalten werden als Attribute, und die Zeilen als Tupel bezeichnet. In dieser Arbeit werden die Begriffe Relation und Tabelle, Spalte und Attribut, sowie Zeile, Reihe und Tupel jeweils synonym verwendet. Alle in dieser Arbeit betrachteten Datenbanken folgen einem relationalen Datenbankenmodell. Um auf Datenbanken zuzugreifen wird in den meisten Fällen eine Version der Sprache \ac{SQL} verwendet~\cite{Saake.2018}.
+
+
+\section{Verwendete Software}
+In dem dieser Projektarbeit zugrundeliegenden Projekt wurde Software von Drittanbietern unter anderem zur Unterstützung des Testprozesses verwendet. Dieses Kapitel soll diese Software und deren für diese Arbeit relevanten Funktionalitäten beschreiben.
+
+\subsection{Jira und Xray}
+Jira ist eine Webanwendung die Teams beim Projektmanagement unterstützen kann. Zum Beispiel ist es möglich Aufgaben zu definieren, zu kategorisieren und Personen zuzuweisen. Diese werden auch als ``issues`` bezeichnet. Ein großer Fokus liegt auf agilen Arbeitsweisen, so wird unter anderem ein Kanbanboard zur Verfügung gestellt~\cite{Atlassian.}.
+\newline
+Gleichzeitig bietet Jira auch eine Erleichterung im Bereich des Testmanagements. Xray ist ein Add-on für Jira und ermöglicht es Tests zu definieren und zu verfolgen. Innerhalb eines Tests können eine Beschreibung des Tests, die zu schaffenden Vorherbedingungen des Tests und die einzelnen Testschritte spezifiziert werden. Für jeden Testschritt ist es zusätzlich möglich ein erwartetes Ergebnis und weitere Informationen oder Dokumente hinzuzufügen. Außerdem ist es möglich Tests zu sogenannten Testsets und auch Testplänen hinzuzufügen, was vor allem der Strukturierung dient.
+\newline
+Handelt es sich um einen manuellen Test, so kann dieser vom Tester gestartet und die Ergebnisse des Tests eingetragen werden. Dabei können den einzelnen Schritten Status zugeordnet werden. Alle zurückliegenden Ausführungen eines Tests bleiben gespeichert~\cite{Xray.}.
+
+\subsection{Kurzer Exkurs zu \ac{AWS}}
+\ac{AWS} ist ein Anbieter von über 175 cloudbasierten Services. Weltweit ist es die meistgenutzte Cloud Platform~\cite{Amazon.}. Im Folgenden werden nur die während des Testprozesses im vorliegenden Projekt eingesetzten Services und deren Möglichkeiten beschrieben. Hierfür wird nur ein grober Überblick über einige bestehende Funktionen dieser Services, aber keine genaueren Erklärungen zu deren Funktionsweise gegeben. Einige dieser Angebote können kostenlos sein, doch für dieses Projekt wurden nur kostenpflichtige Versionen verwendet.
+
+\subsubsection{\ac{S3}}
+Der \ac{AWS} Service \ac{S3} ist eine der meist genutzten Funktionen von \ac{AWS} und bietet die Möglichkeiten Daten in der Cloud zu speichern. Daten können nur in so genannten Buckets gespeichert werden. Um etwas in die Cloud hochzuladen muss ein Nutzer also zuerst mindestens einen Bucket erstellen. In diesen Buckets können wiederum Ordner oder Dokumente gesichert werden~\cite{Amazon.b}.
+\subsubsection{Athena}
+Athena ist ein Abfragedienst für Datenbanken, der es ermöglicht leicht auf in Amazon \ac{S3} gespeicherte Datenbanken zuzugreifen. Die Abfragen sind hierfür über standard \ac{SQL} zu formulieren. Nutzern ist es somit möglich die gewünschten \ac{SQL}-Abfragen einzugeben und innerhalb von Sekunden die resultierende Tabelle zu erhalten~\cite{Amazon.c}.
+\subsubsection{Glue}
+Mithilfe von Amazon Glue können \ac{ETL} Prozesse ausgeführt werden. In diesem Fall ist die wichtigste Funktion der so genannte Glue Job. Ein solcher Job stellt ein Skript dar, das cloudbasiert ausgeführt werden kann. Zum Beispiel ist es hiermit möglich in \ac{S3} gespeicherte Tabellen zu transformieren. Für das schnelle Arbeiten mit großen Datenmengen wird Apache Spark eingesetzt. Glue Jobs müssen in den Programmiersprachen Python oder Scala verfasst werden.
+\newline
+
+
+Aufgrund der Art und Weise, wie Glue mit Daten arbeitet ist es nach einem ausgeführten Glue Job, der eine Tabelle verändert oder erstellt hat, notwendig diese zu crawlen. Crawler sind eine Funktion von Amazon Glue, die Metadaten(zum Beispiel das Schema der Daten) von Datenquellen sammelt und diese speichert. Erst wenn diese Metadaten gesammelt wurden ist es wieder möglich die entsprechende Tabelle zum Beispiel über Amazon Athena anzeigen zu lassen~\cite{Amazon.d}. 
+\subsubsection{\ac{SES}}
+Amazon \ac{SES} erlaubt es dem Nutzer über eine Plattform von Amazon Emails zu versenden und zu empfangen. Zu diesem Zweck ist es möglich zum Beispiel mithilfe eines entsprechenden \ac{AWS} \ac{SDK}  Skripte zu erstellen um das Versenden von Emails zu automatisieren~\cite{Amazon.e}.

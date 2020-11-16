@@ -1,0 +1,835 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Hambling.2019}{book}{}
+      \name{editor}{1}{}{%
+        {{hash=51428578def06aa078ac03799d7fa550}{%
+           family={Hambling},
+           familyi={H\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Swindon, UK}%
+      }
+      \list{publisher}{1}{%
+        {BCS, The Chartered Institute for IT}%
+      }
+      \strng{namehash}{51428578def06aa078ac03799d7fa550}
+      \strng{fullhash}{51428578def06aa078ac03799d7fa550}
+      \strng{bibnamehash}{51428578def06aa078ac03799d7fa550}
+      \strng{editorbibnamehash}{51428578def06aa078ac03799d7fa550}
+      \strng{editornamehash}{51428578def06aa078ac03799d7fa550}
+      \strng{editorfullhash}{51428578def06aa078ac03799d7fa550}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fourth edition}
+      \field{isbn}{1780174926}
+      \field{title}{Software testing: An ISTQB-BCS certified tester foundation guide}
+      \field{year}{2019}
+      \verb{file}
+      \verb http://www.worldcat.org/oclc/1112609082
+      \endverb
+      \keyw{Computer software;Examinations}
+    \endentry
+    \entry{Black.2014}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4ff72b6cfb718d4f98cf5726f94526a9}{%
+           family={Black},
+           familyi={B\bibinitperiod},
+           given={Rex},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Rock Nook}%
+      }
+      \strng{namehash}{4ff72b6cfb718d4f98cf5726f94526a9}
+      \strng{fullhash}{4ff72b6cfb718d4f98cf5726f94526a9}
+      \strng{bibnamehash}{4ff72b6cfb718d4f98cf5726f94526a9}
+      \strng{authorbibnamehash}{4ff72b6cfb718d4f98cf5726f94526a9}
+      \strng{authornamehash}{4ff72b6cfb718d4f98cf5726f94526a9}
+      \strng{authorfullhash}{4ff72b6cfb718d4f98cf5726f94526a9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary: This book teaches test managers what they need to know to achieve advanced skills in test estimation, test planning, test monitoring, and test control. Readers will learn how to define the overall testing goals and strategies for the systems being tested. This hands-on, exercise-rich book provides experience with planning, scheduling, and tracking these tasks. You'll be able to describe and organize the necessary activities as well as learn to select, acquire, and assign adequate resources for testing tasks. You'll learn how to form, organize, and lead testing teams, and master the organizing of communication among the members of the testing teams, and between the testing teams and all the other stakeholders. Additionally, you'll learn how to justify decisions and provide adequate reporting information where applicable. With over thirty years of software and systems engineering experience, author Rex Black is President of RBCS, is a leader in software, hardware, and systems testing, and is the most prolific author practicing in the field of software testing today. He has published a dozen books on testing that have sold tens of thousands of copies worldwide. He is past president of the International Software Testing Qualifications Board (ISTQB) and a director of the American Software Testing Qualifications Board (ASTQB). This book will help you prepare for the ISTQB Advanced Test Manager exam. Included are sample exam questions, at the appropriate level of difficulty, for most of the learning objectives covered by the ISTQB Advanced Level Syllabus. The ISTQB certification program is the leading software tester certification program in the world. With about 300,000 certificate holders and a global presence in over 50 countries, you can be confident in the value and international stature that the Advanced Test Manager certificate can offer you. This second edition has been thoroughly updated to reflect the new ISTQB Advanced Test Manager 2012 Syllabus, and the latest ISTQB Glossary. This edition reflects Rex Black's unique insights into these changes, as he was one of the main participants in the ISTQB Advanced Level Working Group.}
+      \field{edition}{2nd ed.}
+      \field{title}{Advanced software testing / Rex Black}
+      \field{year}{2014}
+      \verb{file}
+      \verb https://learning.oreilly.com/library/view/-/9781492016328/?ar
+      \endverb
+      \verb{urlraw}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680270788&lang=de&site=eds-live
+      \endverb
+      \verb{url}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680270788&lang=de&site=eds-live
+      \endverb
+      \keyw{Certification;Computer software;eBook-ProQuest-O'Reilly-for-Higher-Education;Electronic books;Electronic data processing personnel;Examinations;local;Study guides;Testing}
+    \endentry
+    \entry{Gopalaswamy.2009}{book}{}
+      \name{author}{2}{}{%
+        {{hash=41d311f27949adb548cbd64031d16c03}{%
+           family={Gopalaswamy},
+           familyi={G\bibinitperiod},
+           given={Ramesh},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1c5022423d8e8ae31db93e4e33f3cdae}{%
+           family={Desikan},
+           familyi={D\bibinitperiod},
+           given={Srinivasan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Don Mills}%
+        {Toronto}%
+      }
+      \list{publisher}{2}{%
+        {Pearson Education Canada}%
+        {Pearson Canada [distributor]}%
+      }
+      \strng{namehash}{682f6d0a7176744e48a187417779475a}
+      \strng{fullhash}{682f6d0a7176744e48a187417779475a}
+      \strng{bibnamehash}{682f6d0a7176744e48a187417779475a}
+      \strng{authorbibnamehash}{682f6d0a7176744e48a187417779475a}
+      \strng{authornamehash}{682f6d0a7176744e48a187417779475a}
+      \strng{authorfullhash}{682f6d0a7176744e48a187417779475a}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}Software Testing: Principles and Practices is a comprehensive treatise on software testing. It provides a pragmatic view of testing, addressing emerging areas like extreme testing and ad hoc testing{"}--Resource description page.}
+      \field{isbn}{817758121X}
+      \field{title}{Software Testing: Principles and Practice}
+      \field{year}{2009}
+      \verb{file}
+      \verb http://www.worldcat.org/oclc/697769967
+      \endverb
+      \keyw{Information Technology}
+    \endentry
+    \entry{Patton.2005}{book}{}
+      \name{author}{1}{}{%
+        {{hash=5fb53c0d02d2466622e46d9777d24b35}{%
+           family={Patton},
+           familyi={P\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sams Pub}%
+      }
+      \strng{namehash}{5fb53c0d02d2466622e46d9777d24b35}
+      \strng{fullhash}{5fb53c0d02d2466622e46d9777d24b35}
+      \strng{bibnamehash}{5fb53c0d02d2466622e46d9777d24b35}
+      \strng{authorbibnamehash}{5fb53c0d02d2466622e46d9777d24b35}
+      \strng{authornamehash}{5fb53c0d02d2466622e46d9777d24b35}
+      \strng{authorfullhash}{5fb53c0d02d2466622e46d9777d24b35}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary: Software Testing, Second Edition provides practical insight into the world of software testing and quality assurance. Learn how to find problems in any computer program, how to plan an effective test approach and how to tell when software is ready for release. Updated from the previous edition in 2000 to include a chapter that specifically deals with testing software for security bugs, the processes and techniques used throughout the book are timeless. This book is an excellent investment if you want to better understand what your Software Test team does or you want to write better software.}
+      \field{edition}{2nd ed.}
+      \field{title}{Software testing / Ron Patton}
+      \field{year}{2005}
+      \verb{file}
+      \verb https://learning.oreilly.com/library/view/-/0672327988/?ar
+      \endverb
+      \verb{urlraw}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680505769&lang=de&site=eds-live
+      \endverb
+      \verb{url}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680505769&lang=de&site=eds-live
+      \endverb
+      \keyw{eBook-ProQuest-O'Reilly-for-Higher-Education;Electronic books;local}
+    \endentry
+    \entry{Bucsics.2015}{book}{}
+      \name{author}{1}{}{%
+        {{hash=73e6bc24765842c085c8e27b1f95ff8d}{%
+           family={Bucsics},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {dpunkt.verlag}%
+      }
+      \strng{namehash}{73e6bc24765842c085c8e27b1f95ff8d}
+      \strng{fullhash}{73e6bc24765842c085c8e27b1f95ff8d}
+      \strng{bibnamehash}{73e6bc24765842c085c8e27b1f95ff8d}
+      \strng{authorbibnamehash}{73e6bc24765842c085c8e27b1f95ff8d}
+      \strng{authornamehash}{73e6bc24765842c085c8e27b1f95ff8d}
+      \strng{authorfullhash}{73e6bc24765842c085c8e27b1f95ff8d}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary: pragmatische Darstellung viele Fallbeispiele auch auf Einsatz in agilen Projekten wird eingegangen* Autoren in der Test-Community sehr aktiv und bekannt}
+      \field{edition}{2., aktualisierte und überarbeitete Auflage}
+      \field{title}{Basiswissen Testautomatisierung : Konzepte, Methoden und Techniken / Thomas Bucsics ... [and three others]}
+      \field{year}{2015}
+      \verb{file}
+      \verb https://learning.oreilly.com/library/view/-/9781457194924/?ar
+      \endverb
+      \verb{urlraw}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680241133&lang=de&site=eds-live
+      \endverb
+      \verb{url}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680241133&lang=de&site=eds-live
+      \endverb
+      \keyw{Automation;Computer software;Computer systems;eBook-ProQuest-O'Reilly-for-Higher-Education;Electronic books;local;Testing}
+    \endentry
+    \entry{Axelrod.2018}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0e79861892593a8b8570ee5641c6aa89}{%
+           family={Axelrod},
+           familyi={A\bibinitperiod},
+           given={Arnon.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berkeley, CA}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{0e79861892593a8b8570ee5641c6aa89}
+      \strng{fullhash}{0e79861892593a8b8570ee5641c6aa89}
+      \strng{bibnamehash}{0e79861892593a8b8570ee5641c6aa89}
+      \strng{authorbibnamehash}{0e79861892593a8b8570ee5641c6aa89}
+      \strng{authornamehash}{0e79861892593a8b8570ee5641c6aa89}
+      \strng{authorfullhash}{0e79861892593a8b8570ee5641c6aa89}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{148423832X}
+      \field{title}{Complete Guide to Test Automation: Techniques, Practices, and Patterns for Building and Maintaining Effective Software Projects}
+      \field{year}{2018}
+      \verb{file}
+      \verb http://www.worldcat.org/oclc/1060750271
+      \endverb
+      \keyw{Computer science;Programming Languages,Compilers,Interpreters}
+    \endentry
+    \entry{selenium.webdriver}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c49dfb55f06bb406e2c5ca786f557d38}{%
+           family={Selenium},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{fullhash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{bibnamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authorbibnamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authornamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authorfullhash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Selenium Documentation}
+      \verb{urlraw}
+      \verb https://www.selenium.dev/documentation/en/
+      \endverb
+      \verb{url}
+      \verb https://www.selenium.dev/documentation/en/
+      \endverb
+      \warn{\item Entry 'selenium.webdriver' (bibliography.bib): Invalid format '11.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{selenium.ide}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c49dfb55f06bb406e2c5ca786f557d38}{%
+           family={Selenium},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{fullhash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{bibnamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authorbibnamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authornamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authorfullhash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Selenium IDE}
+      \verb{urlraw}
+      \verb https://www.selenium.dev/selenium-ide/
+      \endverb
+      \verb{url}
+      \verb https://www.selenium.dev/selenium-ide/
+      \endverb
+      \warn{\item Entry 'selenium.ide' (bibliography.bib): Invalid format '11.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{selenium.grid}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c49dfb55f06bb406e2c5ca786f557d38}{%
+           family={Selenium},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{fullhash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{bibnamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authorbibnamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authornamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authorfullhash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Selenium Grid Documentation}
+      \verb{urlraw}
+      \verb https://www.selenium.dev/documentation/en/grid/
+      \endverb
+      \verb{url}
+      \verb https://www.selenium.dev/documentation/en/grid/
+      \endverb
+      \warn{\item Entry 'selenium.grid' (bibliography.bib): Invalid format '11.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{selenium.rc}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c49dfb55f06bb406e2c5ca786f557d38}{%
+           family={Selenium},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{fullhash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{bibnamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authorbibnamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authornamehash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \strng{authorfullhash}{c49dfb55f06bb406e2c5ca786f557d38}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Selenium Legacy Documentation}
+      \verb{urlraw}
+      \verb https://www.selenium.dev/documentation/en/legacy_docs/selenium_rc/
+      \endverb
+      \verb{url}
+      \verb https://www.selenium.dev/documentation/en/legacy_docs/selenium_rc/
+      \endverb
+      \warn{\item Entry 'selenium.rc' (bibliography.bib): Invalid format '11.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Bengfort.2016}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7d1bd2b00642a2ddee0b274615ec4219}{%
+           family={Bengfort},
+           familyi={B\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=db9c16b6448d8330b4c3a43d45164190}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Jenny},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Inc}%
+      }
+      \strng{namehash}{54978fbddbbeeb08d18fd6cc021ebd8c}
+      \strng{fullhash}{54978fbddbbeeb08d18fd6cc021ebd8c}
+      \strng{bibnamehash}{54978fbddbbeeb08d18fd6cc021ebd8c}
+      \strng{authorbibnamehash}{54978fbddbbeeb08d18fd6cc021ebd8c}
+      \strng{authornamehash}{54978fbddbbeeb08d18fd6cc021ebd8c}
+      \strng{authorfullhash}{54978fbddbbeeb08d18fd6cc021ebd8c}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary: Apache Spark is an in-memory framework that allows data scientists to explore and interact with big data much more quickly than with Hadoop. Python users can work with Spark using an interactive shell called PySpark. Why is it important? PySpark makes the large-scale data processing capabilities of Apache Spark accessible to data scientists who are more familiar with Python than Scala or Java. This also allows for reuse of a wide variety of Python libraries for machine learning, data visualization, numerical analysis, etc. What you'll learn---and how you can apply it Compare the different components provided by Spark, and what use cases they fit. Learn how to use RDDs (resilient distributed datasets) with PySpark. Write Spark applications in Python and submit them to the cluster as Spark jobs. Get an introduction to the Spark computing framework. Apply this approach to a worked example to determine the most frequent airline delays in a specific month and year. This lesson is for you because$\ldots$ You're a data scientist, familiar with Python coding, who needs to get up and running with PySpark You're a Python developer who needs to leverage the distributed computing resources available on a Hadoop cluster, without learning Java or Scala first Prerequisites Familiarity with writing Python applications Some familiarity with bash command-line operations Basic understanding of how to use simple functional programming constructs in Python, such as closures, lambdas, maps, etc. Materials or downloads needed in advance Apache Spark This lesson is taken from Data Analytics with Hadoop by Jenny Kim and Benjamin Bengfort.}
+      \field{edition}{1st edition}
+      \field{title}{Interactive Spark using PySpark / Bengfort, Benjamin}
+      \field{year}{2016}
+      \verb{file}
+      \verb https://learning.oreilly.com/library/view/-/9781491965313/?ar
+      \endverb
+      \verb{urlraw}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1684812895&lang=de&site=eds-live
+      \endverb
+      \verb{url}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1684812895&lang=de&site=eds-live
+      \endverb
+      \keyw{eBook-ProQuest-O'Reilly-for-Higher-Education;Electronic books;local}
+    \endentry
+    \entry{Chellappan.2018}{book}{}
+      \name{author}{2}{}{%
+        {{hash=605adb349d3900056f61c8cefc2573ce}{%
+           family={Chellappan},
+           familyi={C\bibinitperiod},
+           given={Subhashini},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c830bfb4e41a40ada8586b22781d7813}{%
+           family={Ganesan},
+           familyi={G\bibinitperiod},
+           given={Dharanitharan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{051d7f36551d92f34d0b3f160b746170}
+      \strng{fullhash}{051d7f36551d92f34d0b3f160b746170}
+      \strng{bibnamehash}{051d7f36551d92f34d0b3f160b746170}
+      \strng{authorbibnamehash}{051d7f36551d92f34d0b3f160b746170}
+      \strng{authornamehash}{051d7f36551d92f34d0b3f160b746170}
+      \strng{authorfullhash}{051d7f36551d92f34d0b3f160b746170}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary: Work with Apache Spark using Scala to deploy and set up single-node, multi-node, and high-availability clusters. This book discusses various components of Spark such as Spark Core, DataFrames, Datasets and SQL, Spark Streaming, Spark MLib, and R on Spark with the help of practical code snippets for each topic. Practical Apache Spark also covers the integration of Apache Spark with Kafka with examples. You'll follow a learn-to-do-by-yourself approach to learning - learn the concepts, practice the code snippets in Scala, and complete the assignments given to get an overall exposure. On completion, you'll have knowledge of the functional programming aspects of Scala, and hands-on expertise in various Spark components. You'll also become familiar with machine learning algorithms with real-time usage. What You Will Learn Discover the functional programming features of Scala Understand the complete architecture of Spark and its~components Integrate Apache Spark with Hive and Kafka Use Spark SQL, DataFrames, and Datasets to process data using traditional SQL queries Work with different machine learning concepts and libraries using Spark's MLlib packages Who This Book Is For Developers and professionals who deal with batch and stream data processing.}
+      \field{isbn}{1484236521}
+      \field{title}{Practical Apache Spark : using the Scala API / Subhashini Chellappan, Dharanitharan Ganesan}
+      \field{year}{2018}
+      \verb{file}
+      \verb https://learning.oreilly.com/library/view/-/9781484236529/?ar
+      \endverb
+      \verb{urlraw}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680138332&lang=de&site=eds-live
+      \endverb
+      \verb{url}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680138332&lang=de&site=eds-live
+      \endverb
+      \keyw{eBook-ProQuest-O'Reilly-for-Higher-Education;Electronic books;local;Scala (Computer program language);Spark (Electronic resource : Apache Software Foundation);SPARK (Electronic resource)}
+    \endentry
+    \entry{Schelter.2018}{article}{}
+      \name{author}{6}{}{%
+        {{hash=aeae02e4c44c27f16026280dbe8190b4}{%
+           family={Schelter},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1a81f8132c2c28eb62183c57468cc2f1}{%
+           family={Lange},
+           familyi={L\bibinitperiod},
+           given={Dustin},
+           giveni={D\bibinitperiod}}}%
+        {{hash=94bf9a919051ef01a79237ca2a2c1b1f}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=90eac8df7184e5649d4296f705b40db5}{%
+           family={Celikel},
+           familyi={C\bibinitperiod},
+           given={Meltem},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0fd231857aac71ba230cefaa32144521}{%
+           family={Biessmann},
+           familyi={B\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8eba7f93dd36fb106025a9140b606288}{%
+           family={Grafberger},
+           familyi={G\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4d7c2223166e34908e89b14c7ad1de1}
+      \strng{fullhash}{97127db7b292057f60b7e5705091bb2e}
+      \strng{bibnamehash}{97127db7b292057f60b7e5705091bb2e}
+      \strng{authorbibnamehash}{97127db7b292057f60b7e5705091bb2e}
+      \strng{authornamehash}{b4d7c2223166e34908e89b14c7ad1de1}
+      \strng{authorfullhash}{97127db7b292057f60b7e5705091bb2e}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2150-8097}
+      \field{journaltitle}{Proceedings of the VLDB Endowment}
+      \field{number}{12}
+      \field{title}{Automating large-scale data quality verification}
+      \field{volume}{11}
+      \field{year}{2018}
+      \field{pages}{1781\bibrangedash 1794}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.14778/3229863.3229867
+      \endverb
+      \verb{file}
+      \verb a7623c00-6b35-4c82-9e62-94737536f9a8:C\:\\Users\\silvan.biewald\\AppData\\Local\\Swiss Academic Software\\Citavi 6\\ProjectCache\\u2f8zdz5ctxvg4qo4la7xvqr4l8gajauwlek3278aq8vk\\Citavi Attachments\\a7623c00-6b35-4c82-9e62-94737536f9a8.pdf:pdf
+      \endverb
+    \endentry
+    \entry{Mili.2015}{book}{}
+      \name{author}{2}{}{%
+        {{hash=b97b87ceb3dd7d445536e8938c8a3695}{%
+           family={Mili},
+           familyi={M\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=78e4508c09a6be79203099d0c2afa06b}{%
+           family={Tchier},
+           familyi={T\bibinitperiod},
+           given={Fairouz},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons}%
+      }
+      \strng{namehash}{004c6b78b963d1b8c8ab6ad9ee97fb74}
+      \strng{fullhash}{004c6b78b963d1b8c8ab6ad9ee97fb74}
+      \strng{bibnamehash}{004c6b78b963d1b8c8ab6ad9ee97fb74}
+      \strng{authorbibnamehash}{004c6b78b963d1b8c8ab6ad9ee97fb74}
+      \strng{authornamehash}{004c6b78b963d1b8c8ab6ad9ee97fb74}
+      \strng{authorfullhash}{004c6b78b963d1b8c8ab6ad9ee97fb74}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1. Auflage}
+      \field{isbn}{1118662873}
+      \field{series}{Quantitative Software Engineering Series}
+      \field{title}{Software Testing: Concepts and Operations}
+      \field{year}{2015}
+      \verb{file}
+      \verb http://www.worldcat.org/oclc/943787710
+      \endverb
+      \keyw{Computer software}
+    \endentry
+    \entry{Saake.2018}{book}{}
+      \name{author}{3}{}{%
+        {{hash=2a5ae6c3a7deb62e4508c393839b89cc}{%
+           family={Saake},
+           familyi={S\bibinitperiod},
+           given={Gunter},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8db2abd6eb5de20da108c145f2c2019f}{%
+           family={Sattler},
+           familyi={S\bibinitperiod},
+           given={Kai-Uwe},
+           giveni={K\bibinithyphendelim U\bibinitperiod}}}%
+        {{hash=94f08f060565b9a18bab52b231e0abc8}{%
+           family={Heuer},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {mitp Verlags}%
+      }
+      \strng{namehash}{7c4d1e855c060be243d5872b45fdf43e}
+      \strng{fullhash}{7c4d1e855c060be243d5872b45fdf43e}
+      \strng{bibnamehash}{7c4d1e855c060be243d5872b45fdf43e}
+      \strng{authorbibnamehash}{7c4d1e855c060be243d5872b45fdf43e}
+      \strng{authornamehash}{7c4d1e855c060be243d5872b45fdf43e}
+      \strng{authorfullhash}{7c4d1e855c060be243d5872b45fdf43e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary: Detaillierte Einführung in die Datenbanktechnologie in der 6. aktualisierten Neuauflage Konzepte relationaler Datenbanken: Architekturen, Modelle, Entwurfsmethoden, Relationenalgebra Ausführliche Behandlung von SQL sowie Einblick in weitere Datenbanksprachen Datenbanken sind eines der wichtigsten Teilgebiete der Informatik und dank Big Data, Industrie 4.0, Internet of Things {\&} Co. müssen immer mehr Daten effizient verwaltet, performant analysiert und sinnvoll ausgegeben werden. Das Buch behandelt systematisch und fundiert die wichtigsten Konzepte und Sprachen, die für den Einsatz von Datenbanksystemen und die Entwicklung von Datenbankanwendungen eine Rolle spielen. Die Grundlagen relationaler Datenbanken werden dabei umfassend erklärt. Die Autoren gehen au{ß}erdem auf Theorie, Entwurfsmethoden sowie Sprachkonzepte für relationale Datenbanken inklusive der ausführlichen Behandlung von SQL ein. Des Weiteren werden Alternativen und Erweiterungen von Datenbankmodellen vorgestellt. Eine durchgehende Beispielanwendung liefert einen wertvollen Praxisbezug und hilft Ihnen dabei, die zugrundeliegenden theoretischen Konzepte besser zu verstehen. Zusammenfassungen und Übungsaufgaben am Ende eines jeden Kapitels erleichtern Ihnen au{ß}erdem das Selbststudium und ermöglichen Ihnen eine optimale Prüfungsvorbereitung. Das Buch eignet sich als Lehrbuch für Studierende der Informatik und verwandter Fächer, aber auch für Anwender und Entwickler, die sich über aktuelle Datenbanktechnologie genauer informieren möchten. Zusätzliche Kapitel sind als kostenloser Download verfügbar. Aus dem Inhalt: Kernkonzepte relationaler Datenbanken Konzepte und Architektur Datenbankentwurf Entity-Relationship-Modell Relationenalgebra Die relationale Datenbanksprache SQL (SQL:2016) Erweiterte Konzepte Erweiterte Entwurfsmodelle QUEL, QBE und Datalog Sichten, Transaktionen, Integrität und Trigger Datenbankanwendungsentwicklung Zugriffskontrolle {\&} Privacy Weitere Datenbankmodelle Multimediale, raum- und zeitbezogene Daten Objektorientierte und objektrelationale Datenbankmodelle XML, XPath, XQuery und SQL/XML NoSQL und Graphdatenbanken Über die Autoren: Gunter Saake, Andreas Heuer und Kai-Uwe Sattler sind Professoren für Informatik an den Universitäten von Magdeburg, Rostock und Ilmenau.}
+      \field{edition}{6. Auflage}
+      \field{isbn}{3958457789}
+      \field{title}{Datenbanken : Konzepte und Sprachen / Gunter Saake, Kai-Uwe Sattler, Andreas Heuer}
+      \field{year}{2018}
+      \verb{file}
+      \verb https://learning.oreilly.com/library/view/-/9783958457782/?ar
+      \endverb
+      \verb{urlraw}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680112104&lang=de&site=eds-live
+      \endverb
+      \verb{url}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680112104&lang=de&site=eds-live
+      \endverb
+      \keyw{Database design;Database management;eBook-ProQuest-O'Reilly-for-Higher-Education;Electronic books;local;Relational databases}
+    \endentry
+    \entry{Atlassian.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a8fd8cd0b6d2cfda939a8ef257e60192}{%
+           family={Atlassian},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{fullhash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{bibnamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authorbibnamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authornamehash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \strng{authorfullhash}{a8fd8cd0b6d2cfda939a8ef257e60192}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Jira Software}
+      \verb{urlraw}
+      \verb https://www.atlassian.com/software/jira/guides/use-cases/what-is-jira-used-for#jira-for-agile-teams
+      \endverb
+      \verb{url}
+      \verb https://www.atlassian.com/software/jira/guides/use-cases/what-is-jira-used-for#jira-for-agile-teams
+      \endverb
+      \warn{\item Entry 'Atlassian.' (bibliography.bib): Invalid format '14.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Xray.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b99ff66f458c9abcb5bb5e173a848cbd}{%
+           family={Xray},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{b99ff66f458c9abcb5bb5e173a848cbd}
+      \strng{fullhash}{b99ff66f458c9abcb5bb5e173a848cbd}
+      \strng{bibnamehash}{b99ff66f458c9abcb5bb5e173a848cbd}
+      \strng{authorbibnamehash}{b99ff66f458c9abcb5bb5e173a848cbd}
+      \strng{authornamehash}{b99ff66f458c9abcb5bb5e173a848cbd}
+      \strng{authorfullhash}{b99ff66f458c9abcb5bb5e173a848cbd}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Xray Documentation}
+      \verb{urlraw}
+      \verb https://docs.getxray.app/display/XRAYCLOUD/About+Xray
+      \endverb
+      \verb{url}
+      \verb https://docs.getxray.app/display/XRAYCLOUD/About+Xray
+      \endverb
+      \warn{\item Entry 'Xray.' (bibliography.bib): Invalid format '14.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Amazon.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{%
+           family={Amazon},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{bibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorbibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authornamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorfullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AWS: What ist AWS}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/de/what-is-aws/
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/de/what-is-aws/
+      \endverb
+      \warn{\item Entry 'Amazon.' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Amazon.b}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{%
+           family={Amazon},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{bibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorbibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authornamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorfullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AWS: S3}
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/AmazonS3/latest/dev/
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/AmazonS3/latest/dev/
+      \endverb
+      \warn{\item Entry 'Amazon.b' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Amazon.c}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{%
+           family={Amazon},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{bibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorbibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authornamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorfullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AWS: Athena}
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/athena/latest/ug/
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/athena/latest/ug/
+      \endverb
+      \warn{\item Entry 'Amazon.c' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Amazon.d}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{%
+           family={Amazon},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{bibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorbibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authornamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorfullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{extraname}{4}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AWS: Glue}
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/glue/latest/dg/
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/glue/latest/dg/
+      \endverb
+      \warn{\item Entry 'Amazon.d' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Amazon.e}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b3b3a6ac74ecbd56bcdbefa4799fb9df}{%
+           family={Amazon},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{fullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{bibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorbibnamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authornamehash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \strng{authorfullhash}{b3b3a6ac74ecbd56bcdbefa4799fb9df}
+      \field{extraname}{5}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AWS: SES}
+      \verb{urlraw}
+      \verb https://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html
+      \endverb
+      \verb{url}
+      \verb https://docs.aws.amazon.com/ses/latest/DeveloperGuide/Welcome.html
+      \endverb
+      \warn{\item Entry 'Amazon.e' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Smith.2015}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a40176c47bbac71e3a28012cf7a3295a}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{a40176c47bbac71e3a28012cf7a3295a}
+      \strng{fullhash}{a40176c47bbac71e3a28012cf7a3295a}
+      \strng{bibnamehash}{a40176c47bbac71e3a28012cf7a3295a}
+      \strng{authorbibnamehash}{a40176c47bbac71e3a28012cf7a3295a}
+      \strng{authornamehash}{a40176c47bbac71e3a28012cf7a3295a}
+      \strng{authorfullhash}{a40176c47bbac71e3a28012cf7a3295a}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary: Beginning JSON is the definitive guide to JSON - JavaScript Object Notation - today's standard in data formatting for the web. The book starts with the basics, and walks you through all aspects of using the JSON format. Beginning JSON covers all areas of JSON from the basics of data formats to creating your own server to store and retrieve persistent data. Beginning JSON provides you with the skill set required for reading and writing properly validated JSON data. The first two chapters of the book will discuss the foundations of JavaScript for those who need it, and provide the necessary understandings for later chapters. Chapters 3 through 12 will uncover what data is, how to convert that data into a transmittable/storable format, how to use AJAX to send and receive JSON, and, lastly, how to reassemble that data back into a proper JavaScript object to be used by your program. The final chapters put everything you learned into practice.}
+      \field{series}{The expert's voice in web development}
+      \field{title}{Beginning JSON / Ben Smith}
+      \field{year}{2015}
+      \verb{file}
+      \verb https://learning.oreilly.com/library/view/-/9781484202029/?ar
+      \endverb
+      \verb{urlraw}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680239597&lang=de&site=eds-live
+      \endverb
+      \verb{url}
+      \verb https://login.ezproxy-dhma.redi-bw.de/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat07667a&AN=bkm.1680239597&lang=de&site=eds-live
+      \endverb
+      \keyw{eBook-ProQuest-O'Reilly-for-Higher-Education;Electronic books;JSON (Document markup language);local}
+    \endentry
+    \entry{Deequ.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b3ea475f1fa85193b96ef033e9ea17b5}{%
+           family={Deequ},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3ea475f1fa85193b96ef033e9ea17b5}
+      \strng{fullhash}{b3ea475f1fa85193b96ef033e9ea17b5}
+      \strng{bibnamehash}{b3ea475f1fa85193b96ef033e9ea17b5}
+      \strng{authorbibnamehash}{b3ea475f1fa85193b96ef033e9ea17b5}
+      \strng{authornamehash}{b3ea475f1fa85193b96ef033e9ea17b5}
+      \strng{authorfullhash}{b3ea475f1fa85193b96ef033e9ea17b5}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Deequ Documentation}
+      \verb{urlraw}
+      \verb https://github.com/awslabs/deequ
+      \endverb
+      \verb{url}
+      \verb https://github.com/awslabs/deequ
+      \endverb
+      \warn{\item Entry 'Deequ.' (bibliography.bib): Invalid format '23.09.2020' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Cucumber.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=039892fd59a649c7eeeae20450afb4b6}{%
+           family={Cucumber},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{039892fd59a649c7eeeae20450afb4b6}
+      \strng{fullhash}{039892fd59a649c7eeeae20450afb4b6}
+      \strng{bibnamehash}{039892fd59a649c7eeeae20450afb4b6}
+      \strng{authorbibnamehash}{039892fd59a649c7eeeae20450afb4b6}
+      \strng{authornamehash}{039892fd59a649c7eeeae20450afb4b6}
+      \strng{authorfullhash}{039892fd59a649c7eeeae20450afb4b6}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cucumber Documentation}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://cucumber.io/docs/guides/overview/
+      \endverb
+      \verb{url}
+      \verb https://cucumber.io/docs/guides/overview/
+      \endverb
+      \warn{\item Entry 'Cucumber.' (bibliography.bib): Invalid format '14.11.2020' of date field 'urldate' - ignoring}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

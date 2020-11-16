@@ -1,0 +1,15 @@
+% !TEX root =  master.tex
+\chapter{Grundlegendes zum Projekt}
+\nocite{*}
+
+Die in dieser Arbeit zu vergleichenden Automatisierungsvarianten von Softwaretests stehen im Zusammenhang mit einem Projekt des IT-Beratungsunternehmens Accenture, an dem der Autor im Rahmen der Praxisphase seines dualen Studiums teilnahm. 
+Gegenstand des Projekts ist es für einen international agierenden Kunden wichtige \ac{KPI}'s für dessen Unternehmen durch eine Applikation darzustellen. Bei diesen Kennzahlen handelt es sich um wichtige Leistungsindikatoren des Unternehmens, wie zum Beispiel die monatlich verkauften Einheiten eines Produkts, oder Veränderung des Umsatzes zwischen zwei Perioden.
+\newline
+Zum Start des Projektes bestanden bereits mehrere dieser Berichterstattungs-Anwendungen auf Seite des Kunden. Ziel des Projektes ist es nun ein System zu erstellen, das alle bestehenden Anwendungen zusammenfasst. Für jede Anwendung existiert dabei eine eigene Datenbasis. Unter Datenbasis wird im Folgenden die Menge an Daten verstanden, die benötigt wird, um alle in den Anforderungen definierten \ac{KPI}'s einer dieser Anwendungen korrekt berechnen zu können. Eine Datenbasis setzt sich wiederum aus ein oder mehreren Datenbanken zusammen. Die gesamte Datenbasis aller bestehenden Anwendungen kann Fehler enthalten und wird im Folgenden auch als \ac{DBFALT} bezeichnet. Es müssen die einzelnen Datenbasen zu einer Datenbank zusammengefasst und eine vollkommen neue Anwendung geschrieben werden.  Die Anwendung wurde im Zeitraum, in dem diese Arbeit erstellt wurde, fast vollständig fertiggestellt. Die Datenbank dieser Anwendung wird auch als \ac{DBFNEU} bezeichnet.
+\newline
+
+
+Die größten Schwierigkeiten ergaben sich dabei durch die Vielzahl an Quellen für die Datenbasis. 
+Diese Quellen waren meist nicht homogen, sondern basierten auf unterschiedlichen Datenmodellen, so bestanden zum Beispiel unterschiedliche Bezeichnungen für ein und dieselbe Information. Deshalb wurde zunächst ein neues Datenmodell erstellt, dass im laufenden Prozess sukzessive implementiert wird. 
+Dazu kam die Fehlerhaftigkeit der \ac{DBFALT}. So lagen unter anderem fehlende, oder falsche Einträge in den Tabellen der Datenbanken vor.  Das war ein Problem für die zu erstellende Applikation, da fehlerhafte Werte in den Quellen zu falschen \ac{KPI}'s in der Berichterstattungs-Anwendung führen. 
+Zudem wurden im Zuge der Implementierung des neuen Datenmodells fast täglich Änderungen an der Datenbasis vorgenommen. Aus diesen Gründen machten sich Testvorgänge notwendig.

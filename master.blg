@@ -1,0 +1,29 @@
+[0] Config.pm:312> INFO - This is Biber 2.15 (beta)
+[1] Config.pm:315> INFO - Logfile is 'master.blg'
+[163] biber-MSWIN64:330> INFO - === 
+[197] Biber.pm:415> INFO - Reading 'master.bcf'
+[330] Biber.pm:949> INFO - Using all citekeys in bib section 0
+[352] Biber.pm:4334> INFO - Processing section 0
+[372] Biber.pm:4523> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[387] bibtex.pm:1682> INFO - LaTeX decoding ...
+[445] bibtex.pm:1494> INFO - Found BibTeX data source 'bibliography.bib'
+[475] Utils.pm:395> WARN - Entry 'Amazon.b' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring
+[478] Utils.pm:395> WARN - Entry 'Amazon.' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring
+[481] Utils.pm:395> WARN - Entry 'selenium.webdriver' (bibliography.bib): Invalid format '11.11.2020' of date field 'urldate' - ignoring
+[485] Utils.pm:395> WARN - Entry 'selenium.rc' (bibliography.bib): Invalid format '11.11.2020' of date field 'urldate' - ignoring
+[492] Utils.pm:395> WARN - Entry 'Xray.' (bibliography.bib): Invalid format '14.11.2020' of date field 'urldate' - ignoring
+[505] Utils.pm:395> WARN - Entry 'Atlassian.' (bibliography.bib): Invalid format '14.11.2020' of date field 'urldate' - ignoring
+[543] Utils.pm:395> WARN - Entry 'Amazon.d' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring
+[559] Utils.pm:395> WARN - Entry 'selenium.ide' (bibliography.bib): Invalid format '11.11.2020' of date field 'urldate' - ignoring
+[562] Utils.pm:395> WARN - Entry 'Cucumber.' (bibliography.bib): Invalid format '14.11.2020' of date field 'urldate' - ignoring
+[570] Utils.pm:395> WARN - Entry 'selenium.grid' (bibliography.bib): Invalid format '11.11.2020' of date field 'urldate' - ignoring
+[573] Utils.pm:395> WARN - Entry 'Deequ.' (bibliography.bib): Invalid format '23.09.2020' of date field 'urldate' - ignoring
+[576] Utils.pm:395> WARN - Entry 'Amazon.c' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring
+[590] Utils.pm:395> WARN - Entry 'Amazon.e' (bibliography.bib): Invalid format '13.11.2020' of date field 'urldate' - ignoring
+[624] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[624] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[624] Biber.pm:4162> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[625] Biber.pm:4168> INFO - No sort tailoring available for locale 'de-DE'
+[654] bbl.pm:651> INFO - Writing 'master.bbl' with encoding 'UTF-8'
+[671] bbl.pm:754> INFO - Output to master.bbl
+[672] Biber.pm:128> INFO - WARNINGS: 13

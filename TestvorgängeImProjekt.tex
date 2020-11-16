@@ -1,0 +1,157 @@
+% !TEX root =  master.tex
+\chapter{Die Testvorgänge im Projekt}
+\nocite{*}
+Im Kapitel 2 (Grundlegendes zum Projekt) wurde beschrieben, welche Problematik das Testen erforderlich macht. In diesem Kapitel soll genauer darauf eingegangen werden, was und auf welche Weise getestet wurde.
+\section{Ein kurzer Überblick}
+Grundsätzlich stand die Datenbasis im Zentrum des Testens. Zum einen wurde an der neu erstellten Datenbank zum anderen an der zu entwickelnden Berichterstattungssoftware getestet. Ausschließlich die Anwendung zu testen wäre nicht ausreichend gewesen, da damit Fehler in der \ac{DBFNEU} von Fehlern in der Anwendung, oder an der Schnittstelle zwischen Datenbank und Anwendung nicht hätten unterschieden werden können. In beiden Fällen existieren sowohl manuelle Tests, als auch Konzepte für automatisierte Tests. 
+\newline
+
+
+Um einen Überblick über die durchgeführten Tests zu behalten wurde die Jira Funktion Xray verwendet. Alle definierten Testfälle wurden in kleineren Gruppen von ungefähr 40 Testfällen pro Gruppe zusammengefasst. In Jira stellte jede dieser Gruppen einen Xray Test dar. Dafür wurden innerhalb eines Xray Tests pro Schrittfeld ein Testfall eingetragen. Die Ergebnisse der Testdurchführungen waren somit für alle zum Projekt gehörenden Personen in Jira abrufbar. 
+\newline
+
+
+Alle Testfälle folgten dabei dem gleichen Muster. Gegenstand der Überprüfung war die Anzahl an Tabelleneinträgen, also Tupel, für eine bestimmte Kombination von Filtern. In einer fiktiven Relation ``Schüler`` mit den Attributen ``Fächer``, ``Name`` und ``Alter`` könnte auf diese Weise zum Beispiel überprüft werden, wie viele Schüler 18 Jahre alt sind und das Unterrichtsfach Spanisch besuchen. Da die Menge der zu testenden Filterkombinationen sehr hoch gewesen wäre, hätte man alle relevanten Kombinationen getestet, waren nur stichprobenartig Testfälle erstellt worden. Die erwarteten Ergebnisse für die Testfälle wurden aus einer anderen Menge an Datenbanken gewonnen. Es ist davon auszugehen, dass dort keine Fehler auftreten. Daher wird diese Menge an Datenbanken im Weiteren \ac{DBR} genannt. Um die erwarteten Ergebnisse zu erheben, galt es mithilfe von \ac{SQL}-Anfragen manuell auf diese Datenbanken zuzugreifen und die erfassten Ergebnisse in Jira bereitzustellen. Eine weitere Schwierigkeit bestand darin, dass sowohl in die \ac{DBR} als auch die \ac{DBFNEU} regelmäßig neue, aktuellere Daten eingespeist wurden. Daher mussten auch die erwarteten Ergebnisse der Testfälle periodisch angepasst und neu erfasst werden.
+
+\section{Testen der Datenbank}
+Zum Zeitpunkt der Erstellung dieser Arbeit wurden Testdurchführungen von drei der definierten Testfall-Gruppen vorgenommen. Jede dieser Gruppen verlangte die Erhebung von erwarteten Werten aus jeweils einer anderen Datenbank aus der Menge \ac{DBR}. 
+In den folgenden Kapiteln sollen zuerst die Tests für die \ac{DBFNEU} und danach diejenigen für die Anwendung näher beschrieben werden. 
+
+\subsection{Manuelle Tests}
+Die Tests für die \ac{DBFNEU} waren bezogen auf die zu erstellende Anwendungssoftware statischer Natur, da die Anwendung für die Durchführung dieser Tests nicht ausgeführt werden musste. 
+\newline
+Alle zu \ac{DBR}, \ac{DBFNEU} und \ac{DBFALT} gehörenden Datenbanken sind in \ac{S3} Buckets der Cloud Plattform \ac{AWS} gespeichert. Die manuellen Tests der \ac{DBFNEU} wurden mithilfe des Athena Services von \ac{AWS} durchgeführt. Die dafür benötigten \ac{SQL}-Anfragen wurden in den jeweiligen Testfällen in Xray eingetragen. Ein Tester musste die \ac{SQL}-Anfrage in Athena eingeben, ausführen und das Ergebnis mit dem erwarteten Ergebnis abgleichen.
+\newline
+Die Anfragen waren alle sehr ähnlicher Natur, da sie einfach nur eine Reihe von Filtern auf eine Tabelle anwendeten. Das zu überprüfende Ergebnis bestand dann immer in der Anzahl der übrigen Reihen der gefilterten Tabelle. Diese Zahl musste vom Tester mit dem erwarteten Ergebnis abgeglichen werden. Die Erhebung der erwarteten Werte wurde auf ähnliche Art und Weise durchgeführt. Das bedeutete einen hohen zeitlichen und personellen Aufwand für den Testprozess.
+\newline
+
+
+Die in Jira sichtbaren Ergebnisse der Testfälle wurden von Entwicklern direkt verwendet, um an der Behebung der Defects in der \ac{DBFNEU} zu arbeiten. Problematisch dabei war, dass die Datenbank eine sehr große Menge an Einträgen enthielt, weswegen fehlerhafte Einträge nicht einfach einzeln, manuell geändert werden konnten. Dies hätte einen zu hohen Zeitaufwand bedeutet. Deshalb mussten grundsätzliche Konzepte und Regeln der Datenbank angepasst werden. Nachdem eine solche Anpassung erfolgt war, musst die Datenbank daraufhin überprüft werden, ob die gefundenen Defects behoben, und ob neue Defects hinzugekommen waren. Auch immer dann, wenn aktuellere Daten in die Datenbank eingespeist wurden, waren alle Testfälle erneut zu überprüfen. Aus diesen Gründen wurden Regressionstests angewendet. 
+Da es in der Natur von Regressionstests liegt, Testfälle häufig auszuführen, kam die Idee auf die Durchführung der Tests zu automatisieren. Dafür gab es verschiedene Möglichkeiten, die im nächsten Kapitel genauer betrachtet werden.
+
+
+\subsection{Automatisierte Tests}
+
+Eine Möglichkeit war es ein vom Kunden entwickeltes Tool zu verwenden, das bereits in anderen Projekten zum Testen von Datenbanken eingesetzt wurde. Im Folgenden auch als \ac{FDD} bezeichnet. Diese Variante hatte den Vorteil, dass das System bereits komplett einsatzfähig zur Verfügung stand. Allerdings war es nicht genau für den vorliegenden Anwendungsfall entwickelt worden, sondern sollte hauptsächlich Formfehler in Datenbanken aufdecken und sicherstellen, dass gewisse Prinzipien eingehalten werden. 
+\newline
+
+
+Eine andere Möglichkeit war ein neues Tool zu erstellen, das die Automatisierung übernehmen konnte.
+Die zweite Variante erforderte auf der einen Seite einen höheren Initialaufwand, bot aber auf der anderen auch viel mehr Freiheit, das Tool an die speziellen Anforderungen des Anwendungsfalles anzupassen. 
+\newline
+
+
+Das Projektteam musste also eine Entscheidung treffen, welche der beiden Varianten eingesetzt werden sollte. Gleichzeitig war es im Rahmen des Projekts jedoch nicht tragbar beide Varianten zu implementieren und hinterher zu entscheiden, welche Variante als besser empfunden wurde. Diese Gegebenheiten führten zur Erstellung dieser Arbeit. Als relevante Kriterien für eine solche Entscheidung wurden hauptsächlich mögliche Zeiteinsparungen, gute Übersichtlichkeit der Testergebnisse, hohe Zuverlässigkeit und Einfachheit des Systems festgelegt.
+\newline
+
+
+Der Autor wurde damit beauftragt ein Konzept für ein neues Tool für die automatisierten Tests zu entwickeln und dieses wenn möglich bereits in Code umzusetzen. Um den initialen Mehraufwand möglichst gering zu halten, der bei dem bereits vorhandenen Tool nicht aufgewendet werden musste, entschied sich der Autor für die Erstellung eines einfachen Skripts, das nur die für die vorliegenden Testfälle benötigten Funktionalitäten enthalten sollte. Das Skript verfasste der Autor in der Programmiersprache Python und zur einfacheren Arbeit mit den großen Datenmengen wurde Spark verwendet.
+
+\subsubsection{Funktionsweise des Skripts}
+Ein Problem, das beim manuellen Testen aufgetreten war, bestand darin, dass die erwarteten Werte für die einzelnen Testfälle aus unterschiedlichen Datenbanken manuell gewonnen werden mussten. Um dem entgegenzuwirken wurde bei der Erstellung des Skriptes dafür gesorgt, dass gleichzeitig auf die jeweils benötigten Datenbanken aus \ac{DBR} und \ac{DBFNEU}, zugegriffen und die erhaltenen Werte verglichen wurden.
+\newline
+
+
+Die Definition der Testfälle geschieht in diesem Skript nicht über \ac{SQL}-Anfragen, sondern über die Definition einer Reihe von Filtern, die auf entsprechende Tabellen angewandt werden. Dafür besteht pro in Xray - definierter Testfallgruppe eine Liste. Diese Einteilung wird vorgenommen, da jede dieser Gruppen einer anderen Datenbank aus \ac{DBR} gegenübersteht. Jeder Testfall wird wiederum über eine Python Liste, in der zwei Python Dictionarys vorhanden sind, abgebildet. Die zwei Dictionarys enthalten eine Reihe von Spalten und korrespondierenden Werten, auf die gefiltert werden soll. Das erste Dictionary repräsentiert hierbei alle Filter für die Tabelle einer Datenbank aus \ac{DBR}, und das zweite Dictionary alle Filter für die Tabelle aus DBFNEU. Ein Beispiel ist in Quelltext 4.1 sichtbar. 
+\begin{lstlisting}[basicstyle=\scriptsize, caption={\texttt{Beispieldefinition von Testfällen}},captionpos=b]
+testcases_group_1 = [
+	#Diese Liste stellt einen Testfall dar:
+	[{"Spalte aus DBR Tabelle":"Filterwert", "eine weitere Spalte":"Filterwert"}, 
+	{"Spalte aus DBFNEU Tabelle":"Filterwert", "eine weitere Spalte":"Filterwert"]}], 
+	#Diese Liste stellt einen weiteren Testfall dar:
+	[{"":""}, {"":""}] 
+]
+\end{lstlisting}
+
+Somit müssen pro Testfall nicht mehr \ac{SQL}-Anfragen erstellt werden, sondern nur aus Spalte und Wert bestehende Filterpaare.
+Die mit Testfällen gefüllten Listen werden dann in der Hauptfunktion des Skriptes verwendet. Diese Funktion ist in Quelltext 4.2 zu sehen. Das vollständige Dokument ist in Anhang 1 einzusehen.
+
+
+\begin{lstlisting}[basicstyle=\scriptsize, caption={\texttt{Auszug aus Automation.py}},captionpos=b]
+def test_testcases(DBR_df, DBFNEU_df, testcases):
+	"""filters DBR and DBFNEU dataframes by conditions specified in testcases and then 
+	compares number of rows for the filtered dfs"""
+	for case in testcases:
+		DBR_df2 = DBR_df
+		DBFNEU_df2 = DBFNEU_df
+		case_parameters = ""
+		#filter DBR_df
+		for column, value in case[0].items():
+			if type(value) == list:
+				DBR_df2 = DBR_df2[col(column).isin(value)]
+			else:
+				DBR_df2 = DBR_df2[col(column) == value]
+		#filter DBFNEU_df
+		for column, value in case[1].items():
+			if type(value) == list:
+				DBFNEU_df2 = DBFNEU_df2[col(column).isin(value)]
+				case_parameters += f"{column}:{value} "
+			else:
+				DBFNEU_df2 = DBFNEU_df2[col(column) == value]
+				value = str(value)
+				case_parameters += f"{column}:{value} "
+		
+		#compare dbs and save result
+		if DBR_df2.count() == DBFNEU_df2.count():
+			result_rows.append([case_parameters, "Success"])
+		else:
+			result_rows.append([case_parameters,"Failure"])
+	
+\end{lstlisting}
+
+Die Hauptfunktion iteriert über alle eingetragenen Testfälle und filtert zuerst die aus \ac{DBR} und danach die aus \ac{DBFNEU}, respektiv in den Schleifen beginnend in Zeile 9 und 15. Um zu gewährleisten, dass die Werte, nach denen gefiltert werden soll, auch aus Listen von Werten bestehen können, werden Listen separat behandelt (siehe Zeilen 10 und 11 sowie 16 und 17). Nachdem beide Tabellen gefiltert wurden, wird die Anzahl ihrer Zeilen verglichen. Sollte die Zeilenanzahl gleich sein, wird der Testfall als erfolgreich gewertet und falls nicht, als fehlgeschlagen. 
+\newline
+Das Resultat jedes Testfalls wird in einer separaten Tabelle gespeichert. Dort werden die Filteroptionen des Testfalls sowie der Status ``Success`` oder ``Failure`` eingetragen.
+\newline
+
+
+In der Praxis soll das Skript als ein Job  des \ac{AWS} Services Glue implementiert werden. Dort ist es nach einem selbst erstellten Zeitplan automatisch ausführbar. Die Tabelle, die das Ergebnis dieses Jobs darstellt, ist dann zum Beispiel über Athena  einzusehen. Die Teile des Codes, in denen auf konkrete Datenbanken zugegriffen wird, sind aus datenschutzrechtlichen Gründen nicht im Anhang 1 enthalten.
+
+
+\subsubsection{Funktionsweise des \ac{FDD}}
+Das vom Kunden verwendete Tool zur Durchführung von Datenbankentests ist um einiges komplexer als das eben beschriebene Skript. Das Ziel bei der Entwicklung dieses Frameworks war es, Qualitätschecks von Datenbanken zu ermöglichen. 
+\newline
+
+
+Deshalb wurde die Spark Erweiterung Deequ verwendet. Die auszuführenden Testfälle werden in einer \ac{JSON} Datei festgelegt.\ac{JSON} ist ein für Datenaustausch weit verbreitetes Dateiformat, das auch leicht für Menschen lesbar ist~\cite{Smith.2015}. Pro Testfall müssen die betroffene Tabelle und Spalte, sowie die Art der Beschränkung angegeben werden. Die Definition der Beschränkungsarten wird hierbei mithilfe von Deequ Funktionen getätigt. Somit kann zum Beispiel getestet werden, ob alle Werte in einer Spalte dem gleichen Datentyp angehören oder ob jeder Wert in einer Spalte einzigartig ist. Alle existierenden Deequ - Funktionen sind unter ~\cite{Deequ.} zu finden. Alternativ gibt es auch die Möglichkeit statt Deequ - Funktionen, \ac{SQL}-Anfragen zu verwenden. In diesem Fall müssen Tabelle und Spalte nicht separat angegeben werden, da dies über die \ac{SQL}-Anfrage selbst geschieht. Für die Form der \ac{SQL}-Anfragen gibt es einzuhaltende Vorgaben. Das Ergebnis der \ac{SQL}-Anfrage muss immer aus einer Tabelle mit einer Spalte bestehen. Im Fall, dass ein Test erfolgreich ist, muss diese Spalte den Text ``Success`` enthalten. Andernfalls ist der eingetragene Text nicht relevant. Eine solche \ac{SQL}-Anfrage könnte beispielhaft wie in Quelltext 4.3 dargestellt aussehen.
+
+\begin{lstlisting}[basicstyle=\scriptsize, caption={\texttt{Beispiel einer SQL-Anfrage im \ac{FDD}}},captionpos=b]
+Select Case When 
+( ( Select Count(*) 
+From table 
+Where column_1 = 500 and column_2 = 1) 
+= 123 ) 
+Then 'Success' 
+Else 'Test Failed' 
+End As Result
+\end{lstlisting}
+
+In dieser \ac{SQL}-Anfrage wird die Tabelle ``table`` auf die Einträge gefiltert, in denen der Wert der Spalten ``column\_1`` und ``column\_2`` respektiv 500 und 1 beträgt. Sollte die Anzahl der Zeilen 123 entsprechen, so wird als Ergebnis ``Success`` widergegeben, andernfalls ist das Ergebnis ``Test Failed``.
+Alle für die Datenbankentests bestehenden Testfälle können unter Verwendung des \ac{FDD} nur mithilfe von \ac{SQL}-Anfragen, nicht aber über Deequ Funktionen, ausgedrückt werden.
+\newline
+Auf diese Weise mit \ac{SQL}-Anfragen zu testen bringt die Begrenzung, dass die \ac{SQL}-Anfragen in einer Zeile definiert werden müssen. Dies schränkt vor allem die Lesbarkeit ein. Aus diesem Grund bietet das \ac{FDD}  die Möglichkeit solche Testfälle in \ac{SQL}-Dateien, anstatt in der eben beschriebenen \ac{JSON} Datei, zu definieren. Dafür ist für jeden Testfall eine eigene \ac{SQL}-Datei zu erstellen, in der zuerst einige Metadaten einzutragen sind, gefolgt von der \ac{SQL}-Anfrage. Das Ergebnis muss auch hier der eben beschriebenen Form folgen. Auf diese Weise ist es möglich die Lesbarkeit der einzelnen \ac{SQL}-Anfragen zu steigern, dies ist vor allem bei langen und komplexen Anfragen sinnvoll. Gleichzeitig ist pro Testfall eine Datei notwendig, was wiederum, gerade bei einer hohen Anzahl von Testfällen, die Übersichtlichkeit über die Tests negativ beeinträchtigt.
+\newline
+Unabhängig davon, ob das \ac{JSON} oder \ac{SQL}-Format gewählt wurde, gibt es die Möglichkeit den Schweregrad des Fehlschlags eines jeden Testfalles zu definieren. Dieser Schweregrad kann als hoch, mittel, niedrig oder nichtig angegeben werden.
+\newline
+
+
+Damit Tests ausgeführt werden können, müssen die präparierten Dokumente (\ac{JSON} und/oder \ac{SQL}-Dateien) in einem Ordner mit einem vorgegebenen Namen in einem AWS \ac{S3} Bucket bereitgestellt werden.  Die Durchführung der Tests wird dann von einem AWS Glue Job vorgenommen. Dieser Job greift auf die betroffene Datenbank, deren Tabellen, die Deequ Tests und die \ac{SQL}-basierten Tests zu. Daraufhin werden alle definierten Testfälle mit der Hilfe von Spark \ac{SQL} überprüft. Die Ergebnisse werden wiederum in einer DynamoDB Tabelle gespeichert. Durch den AWS Service \ac{SES} werden die Resultate der Testfälle nun per E-Mail verschickt. Dabei entspricht eine E-Mail einem Testfall. 
+Nur für Testfälle, die fehlschlugen, werden, E-Mails versendet. Diese enthalten Informationen über Schweregrad und Art des Fehlers,  betroffene Datenbank und Tabelle, sowie eine Beschreibung des Testfalls. 
+\newline
+
+
+Eine weitere Funktion, die das Framework bietet, sind die Einschränkungsvorschläge von Deequ. Dabei handelt es sich um automatisch generierte Empfehlungen, welche Einschränkungen bei einer gegebenen Datenbank überprüft werden sollten. Um diese Funktion zu nutzen muss in dem Glue Job, der andernfalls die definierten Tests ausführt, der Empfehlungsmodus explizit ausgewählt werden. Es ist jedoch nicht möglich Tests durchzuführen, während der  Empfehlungsmodus aktiviert ist. Die computergenerierten Empfehlungen haben immer die Form von Deequ Funktionen, und nicht von \ac{SQL}-Anfragen, . Als Ergebnis dieses Vorgangs wird eine \ac{JSON} Datei gespeichert, in der die vorgeschlagenen Einschränkungen/Testfälle im korrekten Format definiert sind. Diese Datei kann also falls nötig angepasst und dann direkt für das Testen der Datenbank angewendet werden. Wie bereits erwähnt können die für die Datenbankentests festgelegten Testfälle nicht als Deequ Funktion ausgedrückt werden. Aus diesem Grund werden die Einschränkungsvorschläge von Deequ nicht direkt benötigt. Sie könnten jedoch trotzdem Anregung für eine andere Art von Testfällen liefern.
+\newline
+
+
+An welche E-Mail-Adressen die Ergebnisse der Testfälle gesendet werden, ist in den Job Parametern des Glue Jobs festzulegen. Zusätzlich zu E-Mails gibt es auch die Möglichkeit die Testergebnisse als Nachrichten in Microsoft Teams Kanälen anzuzeigen. In den Parametern des Glue Jobs wird auch die zu testende Datenbank spezifiziert. Daraus folgt, dass bei einer Ausführung dieses Glue Jobs nur Tabellen einer einzigen Datenbank überprüft werden können. Aus diesem Grund wird für gewöhnlich der Glue Job jeweils für alle zu überprüfenden Datenbanken dupliziert. Das bietet den Vorteil mehrere Glue Jobs gleichzeitig ausführen und somit zwei oder mehr Datenbanken parallel überprüfen zu können.
+
+
+\section{Testen der Anwendung}
+Wie im Kapitel 4.1 (Ein kurzer Überblick) erwähnt, werden auch Tests in der Berichterstattungs-Anwendung durchgeführt. Auch hier werden die Testfälle mithilfe von Xray überwacht. Die Testfälle entsprechen dabei genau denen für die Datenbanktests. In Xray wurden dafür trotzdem separate Tests erstellt, um Datenbanken- und Anwendungstests einfacher auseinanderhalten zu können. 
+
+\subsection{Manuelle Tests}
+Um die Ausführung der Tests in der Anwendung zu erleichtern, haben die Tester Zugriff auf eine Tabelle, die im Endprodukt nicht enthalten sein wird, jedoch das standardmäßige Interface der Anwendung besitzt. Diese Tabelle umfasste die gesamte Datenbasis der Anwendung. Über das Interface der Applikation ist es möglich alle für einen Testfall relevanten Filter per Klick anzuwählen. Das angezeigte Ergebnis wird dann vom Tester mit dem erwarteten Ergebnis in Jira verglichen.
+
+\subsection{Automatisierte Tests}
+Um die gerade beschriebenen manuellen Tests automatisieren zu können sollte eine Software von Drittanbietern verwendet werden. Die Entscheidung hierfür fiel auf Selenium WebDriver. Dieser Beschluss wurde getroffen, da der Zugriff auf die Berichterstattungs-Anwendung nur über einen Browser geschehen kann und Selenium die Möglichkeit bietet, Arbeitsschritte in Browsern zu automatisieren. Dafür wurden die zur Durchführung der einzelnen Testfälle nötigen Schritte in Selenium definiert. Die so erzeugten Skripte filtern je nach Testfall die Tabelle und gleichen das Ergebnis mit dem erwarteten Ergebnis ab.
